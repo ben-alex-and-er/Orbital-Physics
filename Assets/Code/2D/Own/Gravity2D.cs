@@ -17,7 +17,7 @@ public class Gravity2D : MonoBehaviour
     void Start()
     {
         object2D = GetComponent<Object2D>();
-        // object2D.AddImpulseForce(new Vector2((float) (initialVelocity * Math.Cos(angle)), (float) (initialVelocity * Math.Sin(angle))));
+        object2D.AddVelocity(new Vector2((float) (initialVelocity * Math.Cos(angle)), (float) (initialVelocity * Math.Sin(angle))));
     }
 
     // FixedUpdate is called 50 times per second
@@ -26,7 +26,7 @@ public class Gravity2D : MonoBehaviour
         foreach(GameObject obj in gravityObjects)
         {
             var acceleration = CalculateAcceleration(obj);
-            object2D.AddVelocity(acceleration);
+            object2D.AddAcceleration(acceleration);
         }
         Debug.Log(transform.position);
     }
@@ -37,8 +37,8 @@ public class Gravity2D : MonoBehaviour
         var xDiff = objPosition.x - transform.position.x;
         var yDiff = objPosition.y - transform.position.y;
         var hypotenuse = Math.Pow(xDiff, 2) + Math.Pow(yDiff, 2);
-        var objRigidbody = obj.GetComponent<Rigidbody2D>();
-        var acceleration = Gtemp * objRigidbody.mass / hypotenuse;
+        var otherObject2d = obj.GetComponent<Object2D>();
+        var acceleration = Gtemp * otherObject2d.mass / hypotenuse;
         var ratio = acceleration / hypotenuse;
         return new Vector2((float)(xDiff * ratio), (float)(yDiff * ratio));
     }
