@@ -9,35 +9,30 @@ public class Object2D : MonoBehaviour
 	public double mass;
 	public double airDrag;
 	public float initialVelocity = 0;
-    public float angle = 0; 
+	public float initialAngle = 0;
 	private Vector2 velocity;
-	private Vector2 acceleration;
 	private GravityController2D gravityController;
-	private float multiplierConstant;
 
 	void Start()
 	{
 		gravityController = FindObjectOfType<GravityController2D>();
-		velocity = new Vector2((float)(initialVelocity * Math.Cos(angle)), (float)(initialVelocity * Math.Sin(angle)));
-		multiplierConstant = 0.02f / gravityController.speedMultiplier / gravityController.distanceMultiplier;
+		float radians = (float) (initialAngle * Math.PI / 180);
+		velocity = new Vector2((float)(initialVelocity * Math.Cos(radians) * Math.Sqrt(gravityController.speedMultiplier) / gravityController.distanceMultiplier), (float)(initialVelocity * Math.Sin(radians) * Math.Sqrt(gravityController.speedMultiplier) / gravityController.distanceMultiplier));
+		//Debug.Log("Initial: " + velocity.x);
+		//Debug.Log("Initial: " + velocity.y);
 	}
 	
 	//Called 50 times per second (0.02)
 	void FixedUpdate()
 	{
-		// Debug.Log(velocity.x + " " + multiplierConstant);
-		transform.position += new Vector3(
-			velocity.x * multiplierConstant,
-		 	velocity.y * multiplierConstant,
-			0f);
-		// transform.position += new Vector3(1,2,3);
-		if (velocity.x > 1)
-			Debug.Log(transform.position.x + " by " + transform.position.y);
+		transform.position += new Vector3(velocity.x/50, velocity.y/50, 0f);
 	}
 
 	public void AddVelocity(Vector2 direction)
 	{
 		velocity += direction;
-		// Debug.Log(direction);
+		//Debug.Log("added x: " + direction.x);
+		//Debug.Log("added y: " + direction.y);
+
 	}
 }
