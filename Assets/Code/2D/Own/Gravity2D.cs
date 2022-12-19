@@ -47,11 +47,9 @@ public class Gravity2D : MonoBehaviour
 
         var hypotenuse = Math.Sqrt(Math.Pow(xDiff, 2) + Math.Pow(yDiff, 2));
         var literalDist = hypotenuse * gravityController.distanceMultiplier;
-        //Debug.Log("Distance: " + literalDist);
 
         var otherObject2d = obj.GetComponent<Object2D>();
         var literalAcc = G * otherObject2d.mass / Math.Pow(literalDist, 2);
-        //Debug.Log("Acc: " + literalAcc);
 
         var acceleration = literalAcc * gravityController.speedMultiplier;
 

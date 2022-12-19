@@ -17,9 +17,11 @@ public class Object2D : MonoBehaviour
 	{
 		gravityController = FindObjectOfType<GravityController2D>();
 		float radians = (float) (initialAngle * Math.PI / 180);
-		velocity = new Vector2((float)(initialVelocity * Math.Cos(radians) * Math.Sqrt(gravityController.speedMultiplier) / gravityController.distanceMultiplier), (float)(initialVelocity * Math.Sin(radians) * Math.Sqrt(gravityController.speedMultiplier) / gravityController.distanceMultiplier));
-		//Debug.Log("Initial: " + velocity.x);
-		//Debug.Log("Initial: " + velocity.y);
+		var initialMuliplier = Math.Sqrt(gravityController.speedMultiplier) / gravityController.distanceMultiplier;
+		velocity = new Vector2(
+			(float)(initialVelocity * Math.Cos(radians) * initialMuliplier), 
+			(float)(initialVelocity * Math.Sin(radians) * initialMuliplier)
+		);
 	}
 	
 	//Called 50 times per second (0.02)
@@ -31,8 +33,5 @@ public class Object2D : MonoBehaviour
 	public void AddVelocity(Vector2 direction)
 	{
 		velocity += direction;
-		//Debug.Log("added x: " + direction.x);
-		//Debug.Log("added y: " + direction.y);
-
 	}
 }
