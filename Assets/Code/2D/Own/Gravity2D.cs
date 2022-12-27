@@ -9,11 +9,13 @@ public class Gravity2D : MonoBehaviour
     private double G = 0.00000000006674;
     private Object2D object2D;
     private GravityController2D gravityController;
+    private SystemController systemController;
 
     // Start is called before the first frame update
     void Start()
     {
         gravityController = FindObjectOfType<GravityController2D>();
+        systemController = FindObjectOfType<SystemController>();
         object2D = GetComponent<Object2D>();
         var objs = FindObjectsOfType<Object2D>();
         foreach (Object2D obj in objs)
@@ -28,6 +30,9 @@ public class Gravity2D : MonoBehaviour
     // FixedUpdate is called 50 times per second
     void FixedUpdate()
     {
+        if (systemController.pause)
+            return;
+
         foreach (Object2D obj in gravityObjects)
         {
             if (obj != object2D)

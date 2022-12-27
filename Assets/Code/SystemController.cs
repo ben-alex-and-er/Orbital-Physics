@@ -5,13 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class SystemController : MonoBehaviour
 {
-    private bool pause = false;
-
+    public bool pause = true;
 
     // Start is called before the first frame update
     void Start()
     {
-        Time.timeScale = 0;
+
     }
 
     // Update is called once per frame
@@ -22,14 +21,7 @@ public class SystemController : MonoBehaviour
 
     public void PlayPause()
     {
-        if (pause)
-        {
-            Time.timeScale = 0;
-            pause = false;
-            return;
-        }
-        Time.timeScale = 1;
-        pause = true;
+        pause = !pause;
     }
 
     public void Reset()

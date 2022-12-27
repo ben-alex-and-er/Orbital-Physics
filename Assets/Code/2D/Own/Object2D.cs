@@ -10,12 +10,15 @@ public class Object2D : MonoBehaviour
 	public double airDrag;
 	public float initialVelocity = 0;
 	public float initialAngle = 0;
-	private Vector2 velocity;
+
+	public Vector2 velocity;
 	private GravityController2D gravityController;
+	private SystemController systemController;
 
 	void Start()
 	{
 		gravityController = FindObjectOfType<GravityController2D>();
+		systemController = FindObjectOfType<SystemController>();
 		float radians = (float) (initialAngle * Math.PI / 180);
 		var initialMuliplier = Math.Sqrt(gravityController.speedMultiplier) / gravityController.distanceMultiplier;
 		velocity = new Vector2(
@@ -27,7 +30,11 @@ public class Object2D : MonoBehaviour
 	//Called 50 times per second (0.02)
 	void FixedUpdate()
 	{
+		if (systemController.pause)
+			return;
+
 		transform.position += new Vector3(velocity.x/50, velocity.y/50, 0f);
+		Debug.Log(transform.position);
 	}
 
 	public void AddVelocity(Vector2 direction)
