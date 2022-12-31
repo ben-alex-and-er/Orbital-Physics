@@ -1,0 +1,5 @@
+For Drag and Drop:
+	MAKE SURE BOUNDERIES CHANGE DEPENDING ON SCREEN SIZE
+	Implement ToUI and ToObject
+
+	Dragging game planet back to UI should change it back

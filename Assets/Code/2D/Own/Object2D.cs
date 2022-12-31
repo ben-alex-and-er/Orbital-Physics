@@ -34,7 +34,7 @@ public class Object2D : MonoBehaviour
 			return;
 
 		transform.position += new Vector3(velocity.x/50, velocity.y/50, 0f);
-		Debug.Log(transform.position);
+		//Debug.Log(transform.position);
 	}
 
 	public void AddVelocity(Vector2 direction)

@@ -31,7 +31,7 @@ public class DragObject : MonoBehaviour
 
         var p = camera.ScreenToWorldPoint(mousePos);
         transform.position = p;
-        Debug.Log(transform.position);
+        //Debug.Log(transform.position);
     }
 
     void OnMouseDown()
