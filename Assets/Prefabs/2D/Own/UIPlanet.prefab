@@ -128,5 +128,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14291b22e35357549b0a0ed6ede0aa3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boundaries: {x: 650, y: 280}
   planet: {fileID: 0}

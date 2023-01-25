@@ -5,13 +5,15 @@ using UnityEngine;
 
 public class Object2D : MonoBehaviour
 {
-
 	public double mass;
 	public double airDrag;
 	public float initialVelocity = 0;
 	public float initialAngle = 0;
-
 	public Vector2 velocity;
+
+	[SerializeField]
+	private GameObject ui;
+
 	private GravityController2D gravityController;
 	private SystemController systemController;
 
@@ -41,4 +43,9 @@ public class Object2D : MonoBehaviour
 	{
 		velocity += direction;
 	}
+
+	void OnMouseDown()
+    {
+
+    }
 }

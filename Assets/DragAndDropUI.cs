@@ -1,36 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class DragAndDropUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    public static GameObject draggedObject;
+    private GameObject draggedObject;
 
-    [SerializeField]
-    private Vector2 boundaries;
     [SerializeField]
     private GameObject planet;
+    [SerializeField]
+    private TrailRenderer planetTrail;
 
     private Vector3 start;
-    private bool ui;
-    private Camera camera;
+    private Camera mainCamera;
 
     // Start is called before the first frame update
     void Start()
     {
         start = transform.position;
-        camera = Camera.main;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        Debug.Log(Input.mousePosition);
+        mainCamera = Camera.main;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        Debug.Log("Drag begin");
         draggedObject = gameObject;
     }
 
@@ -41,36 +36,48 @@ public class DragAndDropUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        draggedObject = null;
-        if ((transform.position.x > boundaries.x) && (transform.position.y < boundaries.y))
-        {
-            Debug.Log(transform.position.x + ">" + boundaries.x);
-            ToUI();
-        }
-        else
-        {
-            ToObject();
-        }
-    }
+        var mousePos = Input.mousePosition;
+        mousePos.z = 908.9f;
 
+        var p = mainCamera.ScreenToWorldPoint(mousePos);
+
+        List<RaycastResult> results = new List<RaycastResult>();
+
+        PointerEventData pointerEvent = new PointerEventData(EventSystem.current);
+        pointerEvent.position = mousePos;
+
+        EventSystem.current.RaycastAll(pointerEvent, results);
+
+        foreach (RaycastResult result in results)
+        {
+            if (result.gameObject.CompareTag("DragAndDrop"))
+            {
+                ToUI();
+                return;
+            }
+        }
+        ToObject();
+    }
 
     private void ToUI()
     {
-        Debug.Log("ui");
+        Debug.Log("To UI");
         transform.position = start;
     }
 
     private void ToObject()
     {
         Debug.Log("To Object");
-        planet.SetActive(true);
 
         var mousePos = Input.mousePosition;
         mousePos.z = 908.9f;
 
-        var p = camera.ScreenToWorldPoint(mousePos);
+        var p = mainCamera.ScreenToWorldPoint(mousePos);
         planet.transform.position = p;
+        planetTrail.emitting = true;
+        planet.SetActive(true);
 
+        transform.position = start;
         this.gameObject.SetActive(false);
     }
 }

@@ -6,7 +6,7 @@ using UnityEngine;
 public class Gravity2D : MonoBehaviour
 {
     private List<Object2D> gravityObjects = new List<Object2D>();
-    private double G = 0.00000000006674;
+    private const double G = 0.00000000006674;
     private Object2D object2D;
     private GravityController2D gravityController;
     private SystemController systemController;

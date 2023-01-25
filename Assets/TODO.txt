@@ -1,5 +1,11 @@
 For Drag and Drop:
-	MAKE SURE BOUNDERIES CHANGE DEPENDING ON SCREEN SIZE
+	MAKE SURE BOUNDERIES CHANGE DEPENDING ON SCREEN SIZE - Raycast to UI object
 	Implement ToUI and ToObject
 
 	Dragging game planet back to UI should change it back
+
+
+Placing Object:
+	Initial starting distance (height)
+	Angle (look at how its done currently)
+	Normal (3D)
