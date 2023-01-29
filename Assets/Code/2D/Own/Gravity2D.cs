@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Gravity2D : MonoBehaviour
 {
-    private List<Object2D> gravityObjects = new List<Object2D>();
+    private List<Object2D> gravityObjects = new();
     private const double G = 0.00000000006674;
     private Object2D object2D;
     private GravityController2D gravityController;
@@ -38,7 +38,7 @@ public class Gravity2D : MonoBehaviour
             if (obj != object2D)
             {
                 var acceleration = CalculateAcceleration(obj.gameObject);
-                object2D.AddVelocity(acceleration / 50);
+                object2D.AddVelocity(acceleration / 50); // As called 50 times per second
             }
         }
     }
