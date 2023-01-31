@@ -9,25 +9,25 @@ public class DragObject : MonoBehaviour
     private GameObject draggedObject;
 
     [SerializeField]
-    private GameObject uIPlanet;
-
-    private Vector3 start;
-    private Camera mainCamera;
+    private Object2D selfObject2D;
+    [SerializeField]
     private TrailRenderer trail;
+
+    private PlanetEditor planetEditor;
     private SystemController systemController;
+    private Camera mainCamera;
 
     // Start is called before the first frame update
     void Start()
     {
-        start = transform.position;
         mainCamera = Camera.main;
-        trail = GetComponent<TrailRenderer>();
+        planetEditor = FindObjectOfType<PlanetEditor>();
         systemController = FindObjectOfType<SystemController>();
     }
 
     void Update()
     {
-        if (draggedObject == null)
+        if (draggedObject == null || !systemController.pause)
             return;
 
         var mousePos = Input.mousePosition;
@@ -39,23 +39,30 @@ public class DragObject : MonoBehaviour
 
     public void OnMouseDown()
     {
+        if (!systemController.pause)
+            return;
+
         draggedObject = gameObject;
         trail.emitting = false;
+        planetEditor.SetPlanet(selfObject2D);
     }
 
     public void OnMouseUp()
     {
+        if (!systemController.pause)
+            return;
+
         draggedObject = null;
 
         var mousePos = Input.mousePosition;
         mousePos.z = 908.9f;
 
-        var p = mainCamera.ScreenToWorldPoint(mousePos);
+        List<RaycastResult> results = new();
 
-        List<RaycastResult> results = new List<RaycastResult>();
-
-        PointerEventData pointerEvent = new PointerEventData(EventSystem.current);
-        pointerEvent.position = mousePos;
+        PointerEventData pointerEvent = new(EventSystem.current)
+        {
+            position = mousePos
+        };
 
         EventSystem.current.RaycastAll(pointerEvent, results);
 
@@ -79,11 +86,6 @@ public class DragObject : MonoBehaviour
     private void ToUI()
     {
         Debug.Log("To UI");
-        trail.emitting = false;
-
-        uIPlanet.SetActive(true);
-
-        transform.position = start;
-        this.gameObject.SetActive(false);
+        Destroy(gameObject);
     }
 }

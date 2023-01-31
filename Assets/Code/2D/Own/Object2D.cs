@@ -11,9 +11,6 @@ public class Object2D : MonoBehaviour
 	public float initialAngle;
 	public Vector2 velocity;
 
-	[SerializeField]
-	private GameObject ui;
-
 	private GravityController2D gravityController;
 	private SystemController systemController;
 

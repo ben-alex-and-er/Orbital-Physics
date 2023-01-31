@@ -6,27 +6,24 @@ using UnityEngine.EventSystems;
 
 public class DragAndDropUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    private GameObject draggedObject;
-
     [SerializeField]
     private GameObject planet;
     [SerializeField]
-    private TrailRenderer planetTrail;
+    private GridLayoutGroup gridLayout;
 
-    private Vector3 start;
     private Camera mainCamera;
+    private PlanetEditor planetEditor;
 
     // Start is called before the first frame update
     void Start()
     {
-        start = transform.position;
         mainCamera = Camera.main;
+        planetEditor = FindObjectOfType<PlanetEditor>();
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
         Debug.Log("Drag begin");
-        draggedObject = gameObject;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -39,11 +36,9 @@ public class DragAndDropUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         var mousePos = Input.mousePosition;
         mousePos.z = 908.9f;
 
-        var p = mainCamera.ScreenToWorldPoint(mousePos);
+        List<RaycastResult> results = new();
 
-        List<RaycastResult> results = new List<RaycastResult>();
-
-        PointerEventData pointerEvent = new PointerEventData(EventSystem.current);
+        PointerEventData pointerEvent = new(EventSystem.current);
         pointerEvent.position = mousePos;
 
         EventSystem.current.RaycastAll(pointerEvent, results);
@@ -62,7 +57,10 @@ public class DragAndDropUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     private void ToUI()
     {
         Debug.Log("To UI");
-        transform.position = start;
+
+        var newObject = Instantiate(gameObject);
+        newObject.transform.parent = gameObject.transform.parent;
+        Destroy(gameObject);
     }
 
     private void ToObject()
@@ -73,11 +71,14 @@ public class DragAndDropUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         mousePos.z = 908.9f;
 
         var p = mainCamera.ScreenToWorldPoint(mousePos);
-        planet.transform.position = p;
-        planetTrail.emitting = true;
-        planet.SetActive(true);
 
-        transform.position = start;
-        this.gameObject.SetActive(false);
+        var newPlanet = Instantiate(planet); 
+        newPlanet.transform.position = p;
+        planetEditor.SetPlanet(newPlanet.GetComponent<Object2D>());
+
+        var newObject = Instantiate(gameObject);
+        //newObject.transform.parent = gameObject.transform.parent;
+        newObject.transform.SetParent(gameObject.transform.parent, false);
+        Destroy(gameObject);
     }
 }
