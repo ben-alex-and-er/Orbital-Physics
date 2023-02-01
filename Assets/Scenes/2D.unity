@@ -593,8 +593,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   planet: {fileID: 0}
   planetName: {fileID: 405077656}
-  gravityController: {fileID: 442816214}
-  systemController: {fileID: 0}
+  gravityController: {fileID: 442816216}
+  systemController: {fileID: 1912581757}
   massInputField: {fileID: 318346805}
   massExponential: {fileID: 272439821}
   velocityInputField: {fileID: 1825135424}
@@ -2006,7 +2006,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 442816215}
-  - component: {fileID: 442816214}
+  - component: {fileID: 442816216}
   m_Layer: 0
   m_Name: GravityController
   m_TagString: Untagged
@@ -2014,20 +2014,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &442816214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 442816213}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7efc78ec5a037b4459e66fb334e85788, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speedMultiplier: 10000
-  distanceMultiplier: 1e+9
 --- !u!4 &442816215
 Transform:
   m_ObjectHideFlags: 0
@@ -2043,6 +2029,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &442816216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442816213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63c553fc310c4e140a95eec0906179da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedMultiplier: 10000
+  distanceMultiplier: 1e+9
 --- !u!1 &446241801
 GameObject:
   m_ObjectHideFlags: 0

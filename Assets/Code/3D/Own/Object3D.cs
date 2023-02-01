@@ -3,13 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Object2D : MonoBehaviour
+public class Object3D : MonoBehaviour
 {
 	public double mass;
 	public double airDrag;
 	public float initialVelocity;
 	public float initialAngle;
-	public Vector2 velocity;
+	public float initialDepthAngle;
+	public Vector3 velocity;
 
 	private GravityController gravityController;
 	private SystemController systemController;
@@ -18,11 +19,16 @@ public class Object2D : MonoBehaviour
 	{
 		gravityController = FindObjectOfType<GravityController>();
 		systemController = FindObjectOfType<SystemController>();
-		float radians = (float) (initialAngle * Math.PI / 180);
+		float radians = (float) (initialAngle * Mathf.Deg2Rad);
+		float radiansDepth = (float)(initialDepthAngle * Mathf.Deg2Rad);
 		var initialMuliplier = Math.Sqrt(gravityController.speedMultiplier) / gravityController.distanceMultiplier;
-		velocity = new Vector2(
-			(float)(initialVelocity * Math.Cos(radians) * initialMuliplier), 
-			(float)(initialVelocity * Math.Sin(radians) * initialMuliplier)
+
+		var xzHyp = initialVelocity * Math.Tan(radians);
+
+		velocity = new Vector3(
+			(float)(xzHyp * Math.Cos(radiansDepth) * initialMuliplier), 
+			(float)(initialVelocity * Math.Sin(radians) * initialMuliplier),
+			(float)(xzHyp * Math.Sin(radiansDepth) * initialMuliplier)
 		);
 	}
 	
@@ -32,11 +38,11 @@ public class Object2D : MonoBehaviour
 		if (systemController.pause)
 			return;
 
-		transform.position += new Vector3(velocity.x/50, velocity.y/50, 0f);
+		transform.position += new Vector3(velocity.x/50, velocity.y/50, velocity.z/50);
 		//Debug.Log(transform.position);
 	}
 
-	public void AddVelocity(Vector2 direction)
+	public void AddVelocity(Vector3 direction)
 	{
 		velocity += direction;
 	}

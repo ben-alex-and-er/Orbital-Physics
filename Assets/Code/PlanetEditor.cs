@@ -12,7 +12,7 @@ public class PlanetEditor : MonoBehaviour
 	[SerializeField]
 	public TMP_Text planetName;
 	[SerializeField]
-	private GravityController2D gravityController;
+	private GravityController gravityController;
 	[SerializeField]
 	private SystemController systemController;
 

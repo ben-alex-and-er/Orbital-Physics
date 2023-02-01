@@ -11,13 +11,13 @@ public class Gravity2D : MonoBehaviour
     private Object2D object2D;
 
     private const double G = 0.00000000006674;
-    private GravityController2D gravityController;
+    private GravityController gravityController;
     private SystemController systemController;
 
     // Start is called before the first frame update
     void Start()
     {
-        gravityController = FindObjectOfType<GravityController2D>();
+        gravityController = FindObjectOfType<GravityController>();
         systemController = FindObjectOfType<SystemController>();
         object2D = GetComponent<Object2D>();
         var objs = FindObjectsOfType<Object2D>();
