@@ -39,12 +39,13 @@ public class DragObject : MonoBehaviour
 
     public void OnMouseDown()
     {
+        planetEditor.SetPlanet(selfObject2D, false);
+
         if (!systemController.pause)
             return;
 
         draggedObject = gameObject;
         trail.emitting = false;
-        planetEditor.SetPlanet(selfObject2D);
     }
 
     public void OnMouseUp()

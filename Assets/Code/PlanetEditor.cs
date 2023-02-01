@@ -118,12 +118,12 @@ public class PlanetEditor : MonoBehaviour
 		}
     }
 
-	public void SetPlanet(Object2D newPlanet)
+	public void SetPlanet(Object2D newPlanet, bool newCreation)
     {
 		planet = newPlanet;
 		planetName.text = planet.name;
 
-		UpdateEditor(true);
+		UpdateEditor(newCreation);
 	}
 
 	private void UpdateEditor(bool newPlanet = false)
