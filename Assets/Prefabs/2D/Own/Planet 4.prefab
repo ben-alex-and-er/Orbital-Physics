@@ -106,7 +106,6 @@ MonoBehaviour:
   initialVelocity: 650000000
   initialAngle: 225
   velocity: {x: 0, y: 0}
-  ui: {fileID: 0}
 --- !u!114 &3916696551635932885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,6 +118,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb4c196d39e81094eb0fd5992121b67e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gravityObjects: []
+  object2D: {fileID: 3916696551635932886}
 --- !u!114 &3916696551635932884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,8 +134,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selfObject2D: {fileID: 3916696551635932886}
   trail: {fileID: 6897503007196816826}
-  uIPlanet: {fileID: 0}
-  planetEditor: {fileID: 0}
 --- !u!58 &6897503007196816820
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -8,8 +8,6 @@ public class DragAndDropUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 {
     [SerializeField]
     private GameObject planet;
-    [SerializeField]
-    private GridLayoutGroup gridLayout;
 
     private Camera mainCamera;
     private PlanetEditor planetEditor;

@@ -5,9 +5,12 @@ using UnityEngine;
 
 public class Gravity2D : MonoBehaviour
 {
-    private List<Object2D> gravityObjects = new();
-    private const double G = 0.00000000006674;
+    public List<Object2D> gravityObjects = new();
+
+    [SerializeField]
     private Object2D object2D;
+
+    private const double G = 0.00000000006674;
     private GravityController2D gravityController;
     private SystemController systemController;
 
@@ -23,6 +26,7 @@ public class Gravity2D : MonoBehaviour
             if (obj != object2D)
             {
                 gravityObjects.Add(obj);
+                obj.GetComponent<Gravity2D>().gravityObjects.Add(object2D);
             }
         }
     }
@@ -35,7 +39,7 @@ public class Gravity2D : MonoBehaviour
 
         foreach (Object2D obj in gravityObjects)
         {
-            if (obj != object2D)
+            if (obj != object2D && obj != null)
             {
                 var acceleration = CalculateAcceleration(obj.gameObject);
                 object2D.AddVelocity(acceleration / 50); // As called 50 times per second
