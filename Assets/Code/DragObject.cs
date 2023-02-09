@@ -13,7 +13,7 @@ public class DragObject : MonoBehaviour
     [SerializeField]
     private TrailRenderer trail;
 
-    private PlanetEditor planetEditor;
+    private PlanetEditor2D planetEditor;
     private SystemController systemController;
     private Camera mainCamera;
 
@@ -21,7 +21,7 @@ public class DragObject : MonoBehaviour
     void Start()
     {
         mainCamera = Camera.main;
-        planetEditor = FindObjectOfType<PlanetEditor>();
+        planetEditor = FindObjectOfType<PlanetEditor2D>();
         systemController = FindObjectOfType<SystemController>();
     }
 

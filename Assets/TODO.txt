@@ -1,11 +1,81 @@
-For Drag and Drop:
-	MAKE SURE BOUNDERIES CHANGE DEPENDING ON SCREEN SIZE - Raycast to UI object
-	Implement ToUI and ToObject
-
-	Dragging game planet back to UI should change it back
-
+Planet Editor:
+	Maybe multipliers not in here?
+	Bug when create new planet stops sliders from working??? (Maybe look at Pause())
 
 Placing Object:
 	Initial starting distance (height)
 	Angle (look at how its done currently)
 	Normal (3D)
+
+3d:
+	Need to add planet editor
+	Add drag and drop
+	Maybe user move camera
+	Grid lines?
+	Think of ways to display educational stuffs
+	Maybe nested tool tip - Victoria 3
+
+Investigate speed multiplier (maybe increase fixed update speed)
+
+Change Gantt chart - include other cws
+
+Change name if planet
+
+Education
+	Think of lessons
+	How can this be helpful
+	Adding objects tells more about what it is
+
+Preset values of planets in solar system
+
+Make solar system demo
+	Or premade scenarios (own scenes click on from 2D menu)
+	Trinary star systems?
+	
+
+Issues with collisions
+	How close do they need to be?
+	Delete the smallest object
+
+
+Reza:
+
+Better user expierence
+Looks good too
+
+Do task first then 2d/3d
+
+
+Identify different stakeholders
+	Identify needs of each (user storues)
+	Fulfil this requirement
+	Ask what people want
+
+Look at more similar projects
+	Why is mine better/useful
+	(maybe to learn unity)
+	(maybe need to make others simplier)
+
+
+Report
+	Project management (includes initial estimation and second gantt chart)
+		Explain how and why it changed (cut corners etc)
+	Evaluation
+		What went well
+		What didnt
+		Product evaluation
+			What people likeed etc
+	Implementation Chapter
+	Intro
+		Problem statement (new one)
+		Solution
+			Planning to build to fix
+			Using unity
+	Stakeholder analysis
+	Background
+		Existing tools
+			Why Unity
+		Exisring apps similar
+		Education stuff
+	Conclusion
+		Future work

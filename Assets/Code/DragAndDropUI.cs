@@ -10,13 +10,13 @@ public class DragAndDropUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     private GameObject planet;
 
     private Camera mainCamera;
-    private PlanetEditor planetEditor;
+    private PlanetEditor2D planetEditor;
 
     // Start is called before the first frame update
     void Start()
     {
         mainCamera = Camera.main;
-        planetEditor = FindObjectOfType<PlanetEditor>();
+        planetEditor = FindObjectOfType<PlanetEditor2D>();
     }
 
     public void OnBeginDrag(PointerEventData eventData)
