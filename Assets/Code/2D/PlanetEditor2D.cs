@@ -121,7 +121,7 @@ public class PlanetEditor2D : PlanetEditor
 	public void SetPlanet(Object2D newPlanet, bool newCreation)
     {
 		planet = newPlanet;
-		planetName.text = planet.name;
+		planetName.text = planet.gameObject.name;
 
 		UpdateEditor(newCreation);
 	}

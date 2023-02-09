@@ -592,7 +592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planet: {fileID: 0}
-  planetName: {fileID: 0}
+  planetName: {fileID: 405077656}
   gravityController: {fileID: 442816216}
   systemController: {fileID: 1912581757}
   massInputField: {fileID: 318346805}
@@ -3625,7 +3625,7 @@ PrefabInstance:
     - target: {fileID: 1698550509036295954, guid: d45a4ee25807f4f4b8e604dd190df84c, type: 3}
       propertyPath: planet
       value: 
-      objectReference: {fileID: 5159354135338711586, guid: 906bca7977ab48c4483a0954091d3425, type: 3}
+      objectReference: {fileID: 6427187596543386031, guid: 02e781380f3d0cc47a90858aea086fe0, type: 3}
     - target: {fileID: 1698550509036295954, guid: d45a4ee25807f4f4b8e604dd190df84c, type: 3}
       propertyPath: planetTrail
       value: 
@@ -4579,7 +4579,7 @@ PrefabInstance:
     - target: {fileID: 1698550509036295954, guid: d45a4ee25807f4f4b8e604dd190df84c, type: 3}
       propertyPath: planet
       value: 
-      objectReference: {fileID: 1918206499052656324, guid: e85bf9042090b01478c2fe98a31f1e52, type: 3}
+      objectReference: {fileID: 6427187596543386031, guid: 4107d445698fc1644b82e5584a60a96c, type: 3}
     - target: {fileID: 1698550509036295954, guid: d45a4ee25807f4f4b8e604dd190df84c, type: 3}
       propertyPath: planetTrail
       value: 
@@ -5011,7 +5011,7 @@ PrefabInstance:
     - target: {fileID: 1698550509036295954, guid: d45a4ee25807f4f4b8e604dd190df84c, type: 3}
       propertyPath: planet
       value: 
-      objectReference: {fileID: 3916696551635932892, guid: 1bb08a2b45340984cbc89843cc8b1973, type: 3}
+      objectReference: {fileID: 6427187596543386031, guid: 510095e9618fe7a43b4166dd7f2999a6, type: 3}
     - target: {fileID: 1698550509036295954, guid: d45a4ee25807f4f4b8e604dd190df84c, type: 3}
       propertyPath: planetTrail
       value: 

@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3661023431336058362}
   - component: {fileID: 3661023431336058363}
-  - component: {fileID: 7659845556405535342}
-  - component: {fileID: 7659845556405535343}
+  - component: {fileID: 5525024646981774822}
+  - component: {fileID: 7397643377159042736}
   - component: {fileID: 3468033226092882835}
   m_Layer: 0
   m_Name: Sun
@@ -87,7 +87,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7659845556405535342
+--- !u!114 &5525024646981774822
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -96,28 +96,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 3661023431336058340}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb4c196d39e81094eb0fd5992121b67e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gravityObjects: []
-  object2D: {fileID: 7659845556405535343}
---- !u!114 &7659845556405535343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3661023431336058340}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62d5b4a89dc2c0a4b9d120aa5b13d3ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 99b9564a2f615d743ae789efb054aaab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mass: 2e+30
   airDrag: 0
-  initialVelocity: 0.001
+  initialVelocity: 0
   initialAngle: 0
   velocity: {x: 0, y: 0}
+--- !u!114 &7397643377159042736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3661023431336058340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d591c1fdd9310c45b2693ba39de4f49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gravityObjects: []
+  object2D: {fileID: 5525024646981774822}
 --- !u!96 &3468033226092882835
 TrailRenderer:
   serializedVersion: 2

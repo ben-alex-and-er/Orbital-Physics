@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6427187596543386032}
   - component: {fileID: 6427187596543386033}
-  - component: {fileID: 7343270941195967503}
-  - component: {fileID: 6427187596543386034}
+  - component: {fileID: 700938511217986650}
+  - component: {fileID: 3451769249939949923}
   - component: {fileID: 6427187596543386035}
   - component: {fileID: 4352638044872777138}
   - component: {fileID: 4352638044872777132}
@@ -89,7 +89,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7343270941195967503
+--- !u!114 &700938511217986650
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6427187596543386031}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62d5b4a89dc2c0a4b9d120aa5b13d3ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 99b9564a2f615d743ae789efb054aaab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mass: 6e+24
@@ -106,7 +106,7 @@ MonoBehaviour:
   initialVelocity: 650000000
   initialAngle: 135
   velocity: {x: 0, y: 0}
---- !u!114 &6427187596543386034
+--- !u!114 &3451769249939949923
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -115,11 +115,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6427187596543386031}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb4c196d39e81094eb0fd5992121b67e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d591c1fdd9310c45b2693ba39de4f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gravityObjects: []
-  object2D: {fileID: 7343270941195967503}
+  object2D: {fileID: 700938511217986650}
 --- !u!114 &6427187596543386035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1b8b9bfb2ff520429a7d44bd87391eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selfObject2D: {fileID: 7343270941195967503}
+  selfObject2D: {fileID: 700938511217986650}
   trail: {fileID: 4352638044872777132}
 --- !u!58 &4352638044872777138
 CircleCollider2D:
