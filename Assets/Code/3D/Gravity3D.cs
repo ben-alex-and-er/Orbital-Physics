@@ -3,16 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gravity3D : MonoBehaviour
+public class Gravity3D : BaseGravity
 {
     public List<Object3D> gravityObjects = new();
 
     [SerializeField]
     private Object3D object3D;
-
-    private const double G = 0.00000000006674;
-    private GravityController gravityController;
-    private SystemController systemController;
 
     // Start is called before the first frame update
     void Start()

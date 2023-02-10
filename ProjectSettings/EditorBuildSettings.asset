@@ -6,12 +6,27 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Menu.unity
+    path: Assets/Scenes/Menus/Main Menu.unity
     guid: 9c3262b07ef12924cb9c2a60c260fab6
   - enabled: 1
-    path: Assets/Scenes/2D/2D.unity
+    path: Assets/Scenes/Menus/Binary Menu.unity
+    guid: dbb01489b4b30c94a9f82b654449ceea
+  - enabled: 1
+    path: Assets/Scenes/Menus/Solar Menu.unity
+    guid: 29dcae1305a68074388ac1fe6451d923
+  - enabled: 1
+    path: Assets/Scenes/Menus/Sandbox Menu.unity
+    guid: 721d5330ab80171468d4ba931cd2e7fc
+  - enabled: 1
+    path: Assets/Scenes/Binary/Binary 2D.unity
+    guid: 8d713458052d68a41958d313e87a4376
+  - enabled: 1
+    path: Assets/Scenes/Solar System/Solar System 2D.unity
+    guid: ebd46a36fd48d3546996c560930883c1
+  - enabled: 1
+    path: Assets/Scenes/Sandbox/2D.unity
     guid: 120f843c4a1e4ee43a4d2991623415ca
   - enabled: 1
-    path: Assets/Scenes/3D/3D.unity
+    path: Assets/Scenes/Sandbox/3D.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}

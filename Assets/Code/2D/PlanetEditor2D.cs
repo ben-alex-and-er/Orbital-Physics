@@ -48,7 +48,7 @@ public class PlanetEditor2D : PlanetEditor
 
 	private void Start()
 	{
-		initialMultiplier = Math.Sqrt(gravityController.speedMultiplier) / gravityController.distanceMultiplier;
+		initialMultiplier = Math.Sqrt(gravityController.speedMultiplier * gravityController.timeScale / gravityController.distanceMultiplier); //1 / Math.Sqrt(gravityController.distanceMultiplier);/// gravityController.distanceMultiplier;
 
 		massInputField.onValueChanged.AddListener(delegate { MassChange(true); });
 		massExponential.onValueChanged.AddListener(delegate { MassChange(false); });

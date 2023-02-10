@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 4572236723499281025}
   - component: {fileID: 4572236723499281024}
   - component: {fileID: 4572236723499281031}
-  - component: {fileID: 4572236723499281030}
-  - component: {fileID: 4572236723499281029}
+  - component: {fileID: 7115968123360347836}
+  - component: {fileID: 722760323500512750}
   - component: {fileID: -1256419688845315830}
   m_Layer: 0
   m_Name: Planet 1
@@ -100,7 +100,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4572236723499281030
+--- !u!114 &7115968123360347836
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,16 +109,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 4572236723499281028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e75dd28f925cbb4092f51dfa6fff93d, type: 3}
+  m_Script: {fileID: 11500000, guid: 60575f1258f4fc24582eaed64e7b1384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mass: 6e+24
+  mass: 0
   airDrag: 0
-  initialVelocity: 650000000
-  initialAngle: 135
-  initialDepthAngle: 90
+  initialVelocity: 0
+  initialAngle: 0
+  initialDepthAngle: 0
   velocity: {x: 0, y: 0, z: 0}
---- !u!114 &4572236723499281029
+--- !u!114 &722760323500512750
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,11 +127,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4572236723499281028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a6363b249d2e544fa8f9881eac8aa95, type: 3}
+  m_Script: {fileID: 11500000, guid: 5b97bb32cda3f8248af907de2fd9c09d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gravityObjects: []
-  object3D: {fileID: 4572236723499281030}
+  object3D: {fileID: 7115968123360347836}
 --- !u!96 &-1256419688845315830
 TrailRenderer:
   serializedVersion: 2
