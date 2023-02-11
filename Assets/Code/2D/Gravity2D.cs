@@ -21,8 +21,12 @@ public class Gravity2D : BaseGravity
         {
             if (obj != object2D)
             {
-                gravityObjects.Add(obj);
-                obj.GetComponent<Gravity2D>().gravityObjects.Add(object2D);
+                if (!gravityObjects.Contains(obj))
+                    gravityObjects.Add(obj);
+
+                var objGrav = obj.GetComponent<Gravity2D>();
+                if (!objGrav.gravityObjects.Contains(object2D))
+                    objGrav.gravityObjects.Add(object2D);
             }
         }
     }
@@ -57,6 +61,8 @@ public class Gravity2D : BaseGravity
         var literalAcc = G * otherObject2d.mass / Math.Pow(literalDist, 2);
 
         var acceleration = literalAcc * gravityController.speedMultiplier;
+
+        //Debug.Log(gameObject.name + " to " + obj.name + ": " + acceleration);
 
         return new Vector2((float)(xDiff * acceleration / hypotenuse), (float)(yDiff * acceleration / hypotenuse));
     }

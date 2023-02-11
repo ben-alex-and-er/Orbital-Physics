@@ -112,11 +112,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60575f1258f4fc24582eaed64e7b1384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mass: 0
-  airDrag: 0
-  initialVelocity: 0
-  initialAngle: 0
-  initialDepthAngle: 0
+  mass: 6e+24
+  initialVelocity: 29800
+  initialAngle: 90
+  initialDepthAngle: 45
   velocity: {x: 0, y: 0, z: 0}
 --- !u!114 &722760323500512750
 MonoBehaviour:

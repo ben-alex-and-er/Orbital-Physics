@@ -10,11 +10,12 @@ public class Object2D : BaseObject
 		gravityController = FindObjectOfType<GravityController>();
 
 		float radians = (float) (initialAngle * Mathf.Deg2Rad);
-		var initialMuliplier = Math.Sqrt(gravityController.speedMultiplier * gravityController.timeScale / gravityController.distanceMultiplier);
+
+		var initialMultiplier = Math.Sqrt(gravityController.speedMultiplier * gravityController.timeScale / gravityController.distanceMultiplier);
 
 		velocity = new Vector2(
-			(float)(initialVelocity * Math.Cos(radians) * initialMuliplier), 
-			(float)(initialVelocity * Math.Sin(radians) * initialMuliplier)
+			(float)(initialVelocity * Math.Cos(radians) * initialMultiplier), 
+			(float)(initialVelocity * Math.Sin(radians) * initialMultiplier)
 		);
 	}
 

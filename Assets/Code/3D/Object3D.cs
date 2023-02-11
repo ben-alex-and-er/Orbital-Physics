@@ -12,14 +12,13 @@ public class Object3D : BaseObject
 
 		float radians = (float) (initialAngle * Mathf.Deg2Rad);
 		float radiansDepth = (float)(initialDepthAngle * Mathf.Deg2Rad);
-		var initialMuliplier = Math.Sqrt(gravityController.speedMultiplier * gravityController.timeScale / gravityController.distanceMultiplier);
 
-		var xzHyp = initialVelocity * Math.Tan(radians);
+		var initialMultiplier = Math.Sqrt(gravityController.speedMultiplier * gravityController.timeScale / gravityController.distanceMultiplier);
 
 		velocity = new Vector3(
-			(float)(xzHyp * Math.Cos(radiansDepth) * initialMuliplier), 
-			(float)(initialVelocity * Math.Sin(radians) * initialMuliplier),
-			(float)(xzHyp * Math.Sin(radiansDepth) * initialMuliplier)
+			(float)(initialVelocity * Math.Cos(radiansDepth) * Math.Cos(radians) * initialMultiplier),
+			(float)(initialVelocity * Math.Cos(radiansDepth) * Math.Sin(radians) * initialMultiplier),
+			(float)(initialVelocity * Math.Sin(radiansDepth) * initialMultiplier)
 		);
 	}
 	

@@ -9,7 +9,8 @@ Placing Object:
 
 3d:
 	Need to add planet editor
-	Add drag and drop
+	Updating planet editor (when running) changes path of planet
+	Add drag and drop?
 	Maybe user move camera
 	Grid lines?
 	Think of ways to display educational stuffs

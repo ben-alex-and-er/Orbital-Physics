@@ -103,7 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mass: 6e+24
   initialVelocity: 29800
-  initialAngle: 135
+  initialAngle: 90
   velocity: {x: 0, y: 0}
 --- !u!114 &3451769249939949923
 MonoBehaviour:
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gravityObjects: []
-  baseObject: {fileID: 700938511217986650}
+  object2D: {fileID: 0}
 --- !u!114 &6427187596543386035
 MonoBehaviour:
   m_ObjectHideFlags: 0

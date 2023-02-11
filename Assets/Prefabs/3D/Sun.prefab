@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 9172695456055825685}
   - component: {fileID: 9172695456055825674}
   - component: {fileID: 9172695456055825675}
-  - component: {fileID: 9172695456055825687}
-  - component: {fileID: 9172695456055825686}
+  - component: {fileID: 8445192564190043484}
+  - component: {fileID: 8761061678523401775}
   - component: {fileID: 5796597972637572748}
   m_Layer: 0
   m_Name: Sun
@@ -100,7 +100,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &9172695456055825687
+--- !u!114 &8445192564190043484
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,16 +109,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 9172695456055825672}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e75dd28f925cbb4092f51dfa6fff93d, type: 3}
+  m_Script: {fileID: 11500000, guid: 60575f1258f4fc24582eaed64e7b1384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mass: 2e+30
-  airDrag: 0
-  initialVelocity: 0.001
+  initialVelocity: 0
   initialAngle: 0
   initialDepthAngle: 0
   velocity: {x: 0, y: 0, z: 0}
---- !u!114 &9172695456055825686
+--- !u!114 &8761061678523401775
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,11 +126,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 9172695456055825672}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a6363b249d2e544fa8f9881eac8aa95, type: 3}
+  m_Script: {fileID: 11500000, guid: 5b97bb32cda3f8248af907de2fd9c09d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gravityObjects: []
-  object3D: {fileID: 9172695456055825687}
+  object3D: {fileID: 8445192564190043484}
 --- !u!96 &5796597972637572748
 TrailRenderer:
   serializedVersion: 2
@@ -174,7 +173,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 30
+  m_Time: 600
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1

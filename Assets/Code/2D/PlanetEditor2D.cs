@@ -7,44 +7,7 @@ using System;
 
 public class PlanetEditor2D : PlanetEditor
 {
-	[SerializeField]
 	public Object2D planet;
-	[SerializeField]
-	public TMP_Text planetName;
-	[SerializeField]
-	private GravityController gravityController;
-	[SerializeField]
-	private SystemController systemController;
-
-	[Header("Mass")]
-
-	[SerializeField]
-	private TMP_InputField massInputField;
-	[SerializeField]
-	private TMP_InputField massExponential;
-
-	[Header("Velocity")]
-
-	[SerializeField]
-	private TMP_InputField velocityInputField;
-	[SerializeField]
-	private TMP_InputField velocityExponential;
-
-	[Header("Angle")]
-	[SerializeField]
-	private Slider angleSlider;
-	[SerializeField]
-	private TMP_Text angleText;
-	[SerializeField]
-	private GameObject arrow;
-
-	private double massValue;
-	private int massExp = 1;
-	private double velocityValue;
-	private int velocityExp = 1;
-	private float angle;
-	private double initialMultiplier;
-	private bool paused;
 
 	private void Start()
 	{

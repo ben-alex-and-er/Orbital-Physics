@@ -7,36 +7,7 @@ using System;
 
 public class PlanetEditor3D : PlanetEditor
 {
-	[SerializeField]
 	public Object3D planet;
-	[SerializeField]
-	public TMP_Text planetName;
-	[SerializeField]
-	private GravityController gravityController;
-	[SerializeField]
-	private SystemController systemController;
-
-	[Header("Mass")]
-
-	[SerializeField]
-	private TMP_InputField massInputField;
-	[SerializeField]
-	private TMP_InputField massExponential;
-
-	[Header("Velocity")]
-
-	[SerializeField]
-	private TMP_InputField velocityInputField;
-	[SerializeField]
-	private TMP_InputField velocityExponential;
-
-	[Header("Angle")]
-	[SerializeField]
-	private Slider angleSlider;
-	[SerializeField]
-	private TMP_Text angleText;
-	[SerializeField]
-	private GameObject arrow;
 
 	[Header("Depth Angle")]
 	[SerializeField]
@@ -44,16 +15,9 @@ public class PlanetEditor3D : PlanetEditor
 	[SerializeField]
 	private TMP_Text depthAngleText;
 
-	private double massValue;
-	private int massExp = 1;
-	private double velocityValue;
-	private int velocityExp = 1;
-	private float angle;
 	private float depthAngle;
-	private double initialMultiplier;
-	private bool paused;
 
-	private void Start()
+	void Start()
 	{
 		initialMultiplier = Math.Sqrt(gravityController.speedMultiplier) / gravityController.distanceMultiplier;
 
@@ -67,7 +31,7 @@ public class PlanetEditor3D : PlanetEditor
 		SetPlanet(planet, true);
 	}
 
-	private void Update()
+	void Update()
 	{
 		if (paused || planet == null)
 			return;
@@ -100,17 +64,17 @@ public class PlanetEditor3D : PlanetEditor
 			velocityExp = int.Parse(velocityExponential.text);
 		}
 
-		var v = velocityValue * Mathf.Pow(10, velocityExp);
+		var velocity = velocityValue * Mathf.Pow(10, velocityExp);
 
-		var xzHyp = v * Math.Tan(angle * Mathf.Deg2Rad);
+		var alpha = angle * Mathf.Deg2Rad;
+		var beta = depthAngle * Mathf.Deg2Rad;
 
 		planet.velocity = new Vector3(
-			(float)(xzHyp * Math.Cos(depthAngle * Mathf.Deg2Rad) * initialMultiplier),
-			(float)(v * Math.Sin(angle * Mathf.Deg2Rad) * initialMultiplier),
-			(float)(xzHyp * Math.Sin(depthAngle * Mathf.Deg2Rad) * initialMultiplier)
+			(float)(velocity * Math.Cos(beta) * Math.Cos(alpha) * initialMultiplier),
+			(float)(velocity * Math.Cos(beta) * Math.Sin(alpha) * initialMultiplier),
+			(float)(velocity * Math.Sin(beta) * initialMultiplier)
 		);
 
-		//planet.velocity = new((float)(Mathf.Cos(angle * Mathf.PI / 180) * v * initialMultiplier), (float)(Mathf.Sin(angle * Mathf.PI / 180) * v * initialMultiplier));
 	}
 
 	private void AngleChange()
@@ -162,8 +126,7 @@ public class PlanetEditor3D : PlanetEditor
 			planetVelocity = planet.initialVelocity;
 
 		velocityExp = (int)(Math.Floor(Math.Log(planetVelocity, 10) + 1) - 1);
-		velocityValue = planetVelocity / (Mathf.Pow(10, velocityExp));
-		velocityValue = MathF.Round((float)velocityValue * 1000f) / 1000f;
+		velocityValue = MathF.Round((float)(planetVelocity / (Mathf.Pow(10, velocityExp)) * 1000f) / 1000f);
 
 		var tempAngle = planet.velocity.x != 0 ? Mathf.Rad2Deg * Mathf.Atan(planet.velocity.y / planet.velocity.x) : 0;
 		var tempDepthAngle = planet.velocity.z != 0 ? Mathf.Rad2Deg * Mathf.Atan(planet.velocity.x / planet.velocity.z) : 0;
