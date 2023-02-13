@@ -12,17 +12,23 @@ EditorBuildSettings:
     path: Assets/Scenes/Menus/Binary Menu.unity
     guid: dbb01489b4b30c94a9f82b654449ceea
   - enabled: 1
-    path: Assets/Scenes/Menus/Solar Menu.unity
-    guid: 29dcae1305a68074388ac1fe6451d923
-  - enabled: 1
-    path: Assets/Scenes/Menus/Sandbox Menu.unity
-    guid: 721d5330ab80171468d4ba931cd2e7fc
-  - enabled: 1
     path: Assets/Scenes/Binary/Binary 2D.unity
     guid: 8d713458052d68a41958d313e87a4376
   - enabled: 1
+    path: Assets/Scenes/Binary/Binary 3D.unity
+    guid: ef3e3b6a76c73474499138882ca27605
+  - enabled: 1
+    path: Assets/Scenes/Menus/Solar Menu.unity
+    guid: 29dcae1305a68074388ac1fe6451d923
+  - enabled: 1
     path: Assets/Scenes/Solar System/Solar System 2D.unity
     guid: ebd46a36fd48d3546996c560930883c1
+  - enabled: 1
+    path: Assets/Scenes/Solar System/Solar System 3D.unity
+    guid: d295d78ac11b6184091c8d8830808f64
+  - enabled: 1
+    path: Assets/Scenes/Menus/Sandbox Menu.unity
+    guid: 721d5330ab80171468d4ba931cd2e7fc
   - enabled: 1
     path: Assets/Scenes/Sandbox/2D.unity
     guid: 120f843c4a1e4ee43a4d2991623415ca
