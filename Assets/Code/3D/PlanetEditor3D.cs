@@ -132,7 +132,8 @@ public class PlanetEditor3D : PlanetEditor
 		var tempDepthAngle = planet.velocity.z != 0 ? Mathf.Rad2Deg * Mathf.Atan(planet.velocity.x / planet.velocity.z) : 0;
 
 		bool xPositive = planet.velocity.x >= 0;
-		bool yPositive = planet.velocity.y >= 0;
+		bool yPositive = planet.velocity.y >= 0; 
+		bool zPositive = planet.velocity.z >= 0;
 
 		if (xPositive && !yPositive)
 		{
@@ -143,8 +144,19 @@ public class PlanetEditor3D : PlanetEditor
 			tempAngle += 180;
 		}
 
+		if (zPositive && !xPositive)
+        {
+			tempDepthAngle += 360;
+        }
+		else if (!zPositive)
+        {
+			tempDepthAngle += 180;
+        }
+
 		angle = planetVelocity == planet.initialVelocity ? planet.initialAngle : tempAngle;
 		depthAngle = planetVelocity == planet.initialVelocity ? planet.initialDepthAngle : tempDepthAngle;
+		Debug.Log("angle: " + angle);
+		Debug.Log("depthangle: " + depthAngle);
 
 		//Set Values
 		massInputField.text = massValue.ToString();
@@ -155,5 +167,22 @@ public class PlanetEditor3D : PlanetEditor
 
 		angleSlider.value = angle;
 		depthAngleSlider.value = depthAngle;
+
+		//var x = planet.velocity.x / initialMultiplier / planetVelocity;
+		//var y = planet.velocity.y / initialMultiplier / planetVelocity;
+		//var z = planet.velocity.z / initialMultiplier / planetVelocity;
+
+		//Debug.Log("x: " + x);
+		//Debug.Log("y: " + y);
+		//Debug.Log("z: " + z);
+
+		////var depthradians = Math.Asin(z);
+		////var radians = Math.Acos(x / Math.Cos(depthradians));
+
+		//var radians = Math.Atan2(y, x);
+		//var depthradians = Math.Atan2(Math.Sqrt(Math.Pow(x, 2) + Math.Pow(y, 2)), z);
+
+		//Debug.Log("rad: " + radians * Mathf.Rad2Deg);
+		//Debug.Log("depthrad: " + depthradians * Mathf.Rad2Deg);
 	}
 }
