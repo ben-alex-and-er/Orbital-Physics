@@ -26,6 +26,15 @@ Education
 	Think of lessons
 	How can this be helpful
 	Adding objects tells more about what it is
+	Have 'quests' that students do and move on to next one
+		Have structure
+		Start with changing mass etc
+		Maybe then go to making a stable orbit
+
+		Orbital frequency can be determined by when the angle hits a value
+
+	Try to link the dialogue to the game (tooltips)
+		Not just a wall of text
 
 Preset values of planets in solar system
 

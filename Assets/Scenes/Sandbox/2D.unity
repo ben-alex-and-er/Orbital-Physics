@@ -592,7 +592,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba8000ec39b05d747ad68e986294d703, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  planet: {fileID: 394193123}
   planetName: {fileID: 405077656}
   gravityController: {fileID: 442816216}
   systemController: {fileID: 1912581757}
@@ -603,6 +602,7 @@ MonoBehaviour:
   angleSlider: {fileID: 1708106042}
   angleText: {fileID: 1791259724}
   arrow: {fileID: 185952864}
+  planet: {fileID: 394193123}
 --- !u!1 &251739342
 GameObject:
   m_ObjectHideFlags: 0
@@ -2053,9 +2053,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63c553fc310c4e140a95eec0906179da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedMultiplier: 1000
+  speedMultiplier: 10000
   distanceMultiplier: 1e+9
-  timeScale: 10
+  timeScale: 1
 --- !u!1 &446241801
 GameObject:
   m_ObjectHideFlags: 0
@@ -2338,6 +2338,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3451769249939949923, guid: 7f8edd0968a62b84bb38b9fad873e80f, type: 3}
+      propertyPath: object2D
+      value: 
+      objectReference: {fileID: 394193123}
     - target: {fileID: 6427187596543386031, guid: 7f8edd0968a62b84bb38b9fad873e80f, type: 3}
       propertyPath: m_Name
       value: Planet 1

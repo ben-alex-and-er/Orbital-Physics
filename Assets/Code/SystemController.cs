@@ -16,8 +16,11 @@ public class SystemController : MonoBehaviour
     public void PlayPause()
     {
         pause = !pause;
-        planetEditor.OnPause(pause);
-        dragAndDrop.SetActive(pause);
+        if (planetEditor != null)
+            planetEditor.OnPause(pause);
+
+        if (dragAndDrop != null)
+            dragAndDrop.SetActive(pause);
     }
 
     public void Reset()

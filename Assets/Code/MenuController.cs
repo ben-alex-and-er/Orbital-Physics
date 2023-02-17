@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using static StaticTicks;
+using static LessonsCompleted;
 
 public class MenuController : MonoBehaviour
 {
@@ -34,18 +34,18 @@ public class MenuController : MonoBehaviour
 
     private void Awake()
     {
-        if (binaryTick != null) { binaryTick.SetActive(binaryCompleted); }
-        if (solarTick != null) { solarTick.SetActive(solarCompleted); }
-        if (sandboxTick != null) { sandboxTick.SetActive(sandboxCompleted); }
+        if (binaryTick != null) { binaryTick.SetActive(BinaryCompleted); }
+        if (solarTick != null) { solarTick.SetActive(SolarCompleted); }
+        if (sandboxTick != null) { sandboxTick.SetActive(SandboxCompleted); }
 
-        if (binary2DTick != null) { binary2DTick.SetActive(binary2D); }
-        if (binary3DTick != null) { binary3DTick.SetActive(binary3D); }
+        if (binary2DTick != null) { binary2DTick.SetActive(Binary2D); }
+        if (binary3DTick != null) { binary3DTick.SetActive(Binary3D); }
 
-        if (solar2DTick != null) { solar2DTick.SetActive(solar2D); }
-        if (solar3DTick != null) { solar3DTick.SetActive(solar3D); }
+        if (solar2DTick != null) { solar2DTick.SetActive(Solar2D); }
+        if (solar3DTick != null) { solar3DTick.SetActive(Solar3D); }
 
-        if (sandbox2DTick != null) { sandbox2DTick.SetActive(sandbox2D); }
-        if (sandbox3DTick != null) { sandbox3DTick.SetActive(sandbox3D); }
+        if (sandbox2DTick != null) { sandbox2DTick.SetActive(Sandbox2D); }
+        if (sandbox3DTick != null) { sandbox3DTick.SetActive(Sandbox3D); }
     }
 
     public void LoadScene(string scene)
@@ -57,20 +57,20 @@ public class MenuController : MonoBehaviour
     {
         if (isTwoD)
         {
-            binary2D = true;
+            Binary2D = true;
 
-            if (binary3D)
+            if (Binary3D)
             {
-                binaryCompleted = true;
+                BinaryCompleted = true;
             }
         }
         else
         {
-            binary3D = true;
+            Binary3D = true;
 
-            if (binary2D)
+            if (Binary2D)
             {
-                binaryCompleted = true;
+                BinaryCompleted = true;
             }
         }
     }
@@ -79,20 +79,20 @@ public class MenuController : MonoBehaviour
     {
         if (isTwoD)
         {
-            solar2D = true;
+            Solar2D = true;
 
-            if (solar3D)
+            if (Solar3D)
             {
-                solarCompleted = true;
+                SolarCompleted = true;
             }
         }
         else
         {
-            solar3D = true;
+            Solar3D = true;
 
-            if (solar2D)
+            if (Solar2D)
             {
-                solarCompleted = true;
+                SolarCompleted = true;
             }
         }
     }
@@ -101,20 +101,20 @@ public class MenuController : MonoBehaviour
     {
         if (isTwoD)
         {
-            sandbox2D = true;
+            Sandbox2D = true;
 
-            if (sandbox3D)
+            if (Sandbox3D)
             {
-                sandboxCompleted = true;
+                SandboxCompleted = true;
             }
         }
         else
         {
-            sandbox3D = true;
+            Sandbox3D = true;
 
-            if (sandbox2D)
+            if (Sandbox2D)
             {
-                sandboxCompleted = true;
+                SandboxCompleted = true;
             }
         }
     }

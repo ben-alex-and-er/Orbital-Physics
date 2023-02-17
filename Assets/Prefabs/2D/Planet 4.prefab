@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gravityObjects: []
-  baseObject: {fileID: 700938511217986650}
+  object2D: {fileID: 700938511217986650}
 --- !u!114 &6427187596543386035
 MonoBehaviour:
   m_ObjectHideFlags: 0

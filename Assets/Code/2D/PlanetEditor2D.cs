@@ -7,7 +7,11 @@ using System;
 
 public class PlanetEditor2D : PlanetEditor
 {
+	[Header("2D")]
 	public Object2D planet;
+
+	[SerializeField]
+	private Lesson3 lesson3;
 
 	private void Start()
 	{
@@ -18,6 +22,9 @@ public class PlanetEditor2D : PlanetEditor
 		velocityInputField.onValueChanged.AddListener(delegate { VelocityChange(true); });
 		velocityExponential.onValueChanged.AddListener(delegate { VelocityChange(false); });
 		angleSlider.onValueChanged.AddListener(delegate { AngleChange(); });
+
+		if (planet != null)
+			planetName.text = planet.gameObject.name;
 	}
 
     private void Update()
@@ -98,16 +105,20 @@ public class PlanetEditor2D : PlanetEditor
 		var planetVelocity = new Vector2((float)(planet.velocity.x / initialMultiplier), (float)(planet.velocity.y / initialMultiplier)).magnitude;
 
 		if (newPlanet)
+        {
 			planetVelocity = planet.initialVelocity;
+			if (lesson3 != null)
+				lesson3.CompletedLesson();
+        }
 
 		velocityExp = (int)(Math.Floor(Math.Log(planetVelocity, 10) + 1) - 1);
 		velocityValue = planetVelocity / (Mathf.Pow(10, velocityExp));
 		velocityValue = MathF.Round((float)velocityValue * 1000f) / 1000f;
 
-		var tempAngle = planet.velocity.x != 0 ? Mathf.Rad2Deg * Mathf.Atan(planet.velocity.y / planet.velocity.x) : 0;
+		var tempAngle = planet.velocity.x != 0 ? Mathf.Rad2Deg * Mathf.Atan(planet.velocity.y / planet.velocity.x) : 90;
 
-		bool xPositive = planet.velocity.x >= 0;
-		bool yPositive = planet.velocity.y >= 0;
+		bool xPositive = planet.velocity.x > 0;
+		bool yPositive = planet.velocity.y > 0;
 
 		if (xPositive && !yPositive)
 		{
