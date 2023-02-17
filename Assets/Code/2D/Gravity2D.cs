@@ -55,14 +55,21 @@ public class Gravity2D : BaseGravity
         var yDiff = objPosition.y - transform.position.y;
 
         var hypotenuse = Math.Sqrt(Math.Pow(xDiff, 2) + Math.Pow(yDiff, 2));
+
+        if (hypotenuse < minCollisionDistance)
+        {
+            var objectToDestroy = object2D.mass < obj.GetComponent<BaseObject>().mass ? object2D.gameObject : obj;
+            Debug.Log("Destroyed " + objectToDestroy.name + ": " + hypotenuse + "<" + minCollisionDistance);
+            Destroy(objectToDestroy);
+            return new Vector2(0,0);
+        }
+
         var literalDist = hypotenuse * gravityController.distanceMultiplier;
 
         var otherObject2d = obj.GetComponent<Object2D>();
         var literalAcc = G * otherObject2d.mass / Math.Pow(literalDist, 2);
 
         var acceleration = literalAcc * gravityController.speedMultiplier;
-
-        //Debug.Log(gameObject.name + " to " + obj.name + ": " + acceleration);
 
         return new Vector2((float)(xDiff * acceleration / hypotenuse), (float)(yDiff * acceleration / hypotenuse));
     }
