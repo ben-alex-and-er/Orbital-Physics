@@ -1,24 +1,25 @@
 using static LessonsCompleted;
 
-public class Lesson3 : Lesson
+public class Lesson4 : Lesson
 {
-    // Drag and drop objects in
+    // Play/Pause usage
 
     private void Start()
     {
-        beforeLesson.SetActive(!Lesson3Completed);
-        afterLesson.SetActive(Lesson3Completed);
+        beforeLesson.SetActive(!Lesson4Completed);
+        afterLesson.SetActive(Lesson4Completed);
     }
 
     public void CompletedLesson()
     {
-        Lesson3Completed = true;
+        Lesson4Completed = true;
         beforeLesson.SetActive(false);
         afterLesson.SetActive(true);
     }
 
     public void ResetLesson()
     {
-        Lesson3Completed = false;
+        Lesson4Completed = false;
     }
+
 }

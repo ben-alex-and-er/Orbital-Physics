@@ -130,6 +130,7 @@ public class PlanetEditor2D : PlanetEditor
 		}
 
 		angle = planetVelocity == planet.initialVelocity ? planet.initialAngle : tempAngle;
+		Debug.Log(angle);
 
 		//Set Values
 		massInputField.text = massValue.ToString();
