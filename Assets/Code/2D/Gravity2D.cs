@@ -16,19 +16,24 @@ public class Gravity2D : BaseGravity
         gravityController = FindObjectOfType<GravityController>();
         systemController = FindObjectOfType<SystemController>();
         object2D = GetComponent<Object2D>();
-        var objs = FindObjectsOfType<Object2D>();
-        foreach (Object2D obj in objs)
-        {
-            if (obj != object2D)
-            {
-                if (!gravityObjects.Contains(obj))
-                    gravityObjects.Add(obj);
 
-                var objGrav = obj.GetComponent<Gravity2D>();
-                if (!objGrav.gravityObjects.Contains(object2D))
-                    objGrav.gravityObjects.Add(object2D);
+        if (gravityObjects.Count == 0)
+        {
+            var objs = FindObjectsOfType<Object2D>();
+            foreach (Object2D obj in objs)
+            {
+                if (obj != object2D)
+                {
+                    if (!gravityObjects.Contains(obj))
+                        gravityObjects.Add(obj);
+
+                    var objGrav = obj.GetComponent<Gravity2D>();
+                    if (!objGrav.gravityObjects.Contains(object2D))
+                        objGrav.gravityObjects.Add(object2D);
+                }
             }
         }
+
     }
 
     // FixedUpdate is called 50 times per second
