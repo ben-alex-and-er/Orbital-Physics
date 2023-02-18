@@ -15,7 +15,7 @@ public class PlanetEditor2D : PlanetEditor
 
 	private void Start()
 	{
-		initialMultiplier = Math.Sqrt(gravityController.speedMultiplier * gravityController.timeScale / gravityController.distanceMultiplier); //1 / Math.Sqrt(gravityController.distanceMultiplier);/// gravityController.distanceMultiplier;
+		initialMultiplier = Math.Sqrt(gravityController.speedMultiplier * gravityController.timeScale / gravityController.distanceMultiplier);
 
 		massInputField.onValueChanged.AddListener(delegate { MassChange(true); });
 		massExponential.onValueChanged.AddListener(delegate { MassChange(false); });
@@ -25,6 +25,9 @@ public class PlanetEditor2D : PlanetEditor
 
 		if (planet != null)
 			planetName.text = planet.gameObject.name;
+
+		if (disableEditor)
+			EnableInputs(false);
 	}
 
     private void Update()
@@ -75,18 +78,23 @@ public class PlanetEditor2D : PlanetEditor
 
     public override void OnPause(bool pause)
     {
-        massInputField.enabled = pause;
-        massExponential.enabled = pause;
-        velocityInputField.enabled = pause;
-        velocityExponential.enabled = pause;
-		angleSlider.enabled = pause;
+		if (!disableEditor)
+			EnableInputs(pause);
+
 		paused = pause;
 
 		if (pause)
-        {
-			UpdateEditor();
-		}
+    		UpdateEditor();
     }
+
+	private void EnableInputs(bool enable)
+    {
+		massInputField.enabled = enable;
+		massExponential.enabled = enable;
+		velocityInputField.enabled = enable;
+		velocityExponential.enabled = enable;
+		angleSlider.interactable = enable;
+	}
 
 	public void SetPlanet(Object2D newPlanet, bool newCreation)
     {

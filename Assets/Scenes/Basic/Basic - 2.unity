@@ -2385,7 +2385,9 @@ MonoBehaviour:
   angleSlider: {fileID: 417189444}
   angleText: {fileID: 26901915}
   arrow: {fileID: 451199040}
+  disableEditor: 0
   planet: {fileID: 1195384421}
+  lesson3: {fileID: 0}
 --- !u!61 &963402699
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4023,9 +4025,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63c553fc310c4e140a95eec0906179da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedMultiplier: 1000
+  speedMultiplier: 100
   distanceMultiplier: 1e+9
-  timeScale: 10
+  timeScale: 100
 --- !u!4 &1462114347
 Transform:
   m_ObjectHideFlags: 0

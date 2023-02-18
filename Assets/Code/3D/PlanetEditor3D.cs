@@ -28,6 +28,12 @@ public class PlanetEditor3D : PlanetEditor
 		angleSlider.onValueChanged.AddListener(delegate { AngleChange(); });
 		depthAngleSlider.onValueChanged.AddListener(delegate { AngleChange(); });
 
+		if (planet != null)
+			planetName.text = planet.gameObject.name;
+
+		if (disableEditor)
+			EnableInputs(false);
+
 		SetPlanet(planet, true);
 	}
 
@@ -89,17 +95,23 @@ public class PlanetEditor3D : PlanetEditor
 
 	public override void OnPause(bool pause)
 	{
-		massInputField.enabled = pause;
-		massExponential.enabled = pause;
-		velocityInputField.enabled = pause;
-		velocityExponential.enabled = pause;
-		angleSlider.enabled = pause;
+		if (!disableEditor)
+			EnableInputs(pause);
+
 		paused = pause;
 
 		if (pause)
-		{
 			UpdateEditor();
-		}
+	}
+
+	private void EnableInputs(bool enable)
+	{
+		massInputField.enabled = enable;
+		massExponential.enabled = enable;
+		velocityInputField.enabled = enable;
+		velocityExponential.enabled = enable;
+		angleSlider.interactable = enable;
+		depthAngleSlider.interactable = enable;
 	}
 
 	public void SetPlanet(Object3D newPlanet, bool newCreation)

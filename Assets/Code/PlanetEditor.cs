@@ -35,6 +35,10 @@ public abstract class PlanetEditor : MonoBehaviour
 	[SerializeField]
 	protected GameObject arrow;
 
+	[Header("Editor")]
+	[SerializeField]
+	protected bool disableEditor;
+
 	protected double massValue;
 	protected int massExp = 1;
 	protected double velocityValue;
