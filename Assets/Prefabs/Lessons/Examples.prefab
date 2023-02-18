@@ -1,15 +1,27 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &4847709314460291470
+--- !u!1001 &2230158155770805166
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630451333769626876, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2689009604613159192, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
+      propertyPath: m_Name
+      value: Content
+      objectReference: {fileID: 0}
     - target: {fileID: 2689009604613159192, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2689009604656382528, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
+      propertyPath: m_Name
+      value: Removed
       objectReference: {fileID: 0}
     - target: {fileID: 2689009604656382528, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
       propertyPath: m_IsActive
@@ -17,16 +29,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2689009605394458010, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
       propertyPath: m_text
-      value: 'Now see what happens when you run the simulation again - The objects
-        are now no longer in a stable orbit.
+      value: 'As you can see there is a stable orbit, even when it is with two Stars!
 
 
-        This is because the higher
-        mass an object has, the more acceleration it causes to OTHER objects'
+        Play
+        future lessons to discover more fun space systems'
       objectReference: {fileID: 0}
     - target: {fileID: 2689009605394458010, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
       propertyPath: m_margin.w
       value: -465.92407
+      objectReference: {fileID: 0}
+    - target: {fileID: 2689009605695373721, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
+      propertyPath: m_text
+      value: 'Examples:'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2689009605695373723, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
+      propertyPath: m_Name
+      value: 'Examples:'
       objectReference: {fileID: 0}
     - target: {fileID: 2689009606128405028, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
       propertyPath: m_Pivot.x
@@ -42,7 +61,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2689009606128405028, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2689009606128405028, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
       propertyPath: m_AnchorMax.y
@@ -50,7 +69,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2689009606128405028, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2689009606128405028, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
       propertyPath: m_AnchorMin.y
@@ -62,7 +81,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2689009606128405028, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 317.7436
+      value: 370
       objectReference: {fileID: 0}
     - target: {fileID: 2689009606128405028, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
       propertyPath: m_LocalPosition.x
@@ -94,7 +113,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2689009606128405028, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -287
+      value: 287
       objectReference: {fileID: 0}
     - target: {fileID: 2689009606128405028, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -118,27 +137,60 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2689009606128405029, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
       propertyPath: m_Color.b
-      value: 0.49056602
+      value: 0.49411765
       objectReference: {fileID: 0}
     - target: {fileID: 2689009606128405029, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
       propertyPath: m_Color.g
-      value: 0.49056602
+      value: 0.49411765
       objectReference: {fileID: 0}
     - target: {fileID: 2689009606128405029, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
       propertyPath: m_Color.r
-      value: 0.49056602
+      value: 0.49411765
       objectReference: {fileID: 0}
     - target: {fileID: 2689009606128405031, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
       propertyPath: m_Name
-      value: Lesson Variant
+      value: Examples
       objectReference: {fileID: 0}
     - target: {fileID: 2689009606333874161, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
       propertyPath: m_text
-      value: Change the mass of the planet using the Planet Editor
+      value: '- Sirius A and a Sirius B (white dwarf)
+
+        - Procyon A and Procyon
+        B
+
+        - Mira A and Mira B (white dwarf)'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2689009606333874161, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
+      propertyPath: m_fontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2689009606333874161, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2689009606333874161, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2689009606333874161, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
+      propertyPath: m_isRightToLeft
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2689009606575060092, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 469
+      objectReference: {fileID: 0}
+    - target: {fileID: 2689009606575060092, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 142.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2689009606575060092, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -105.3
       objectReference: {fileID: 0}
     - target: {fileID: 2689009606575060093, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 1398918d4ae1e464ea0110f09b451af2, type: 3}
+      objectReference: {fileID: 21300000, guid: 47d86c976bc608c46887bc13a5f726c1, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
