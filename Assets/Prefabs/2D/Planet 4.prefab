@@ -103,7 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mass: 6e+24
   initialVelocity: 29800
-  initialAngle: 225
+  initialAngle: 90
   velocity: {x: 0, y: 0}
 --- !u!114 &3451769249939949923
 MonoBehaviour:

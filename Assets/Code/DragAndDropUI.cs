@@ -70,12 +70,14 @@ public class DragAndDropUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
         var p = mainCamera.ScreenToWorldPoint(mousePos);
 
+        //Create Planet
         var newPlanet = Instantiate(planet); 
         newPlanet.transform.position = p;
+        newPlanet.name = planet.name;
         planetEditor.SetPlanet(newPlanet.GetComponent<Object2D>(), true);
-
+        
+        //Replace UI Element
         var newObject = Instantiate(gameObject);
-        //newObject.transform.parent = gameObject.transform.parent;
         newObject.transform.SetParent(gameObject.transform.parent, false);
         Destroy(gameObject);
     }
