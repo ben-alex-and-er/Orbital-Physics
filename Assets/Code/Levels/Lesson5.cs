@@ -12,6 +12,7 @@ public class Lesson5 : Lesson
 
     public void CompletedLesson()
     {
+        Lesson5CompletedOnce = true;
         Lesson5Completed = true;
         beforeLesson.SetActive(false);
         afterLesson.SetActive(true);

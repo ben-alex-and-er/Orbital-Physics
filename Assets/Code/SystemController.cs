@@ -28,8 +28,8 @@ public class SystemController : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    public void ReturnToMenu()
+    public void ReturnToMenu(string scene)
     {
-        SceneManager.LoadScene("Main Menu");
+        SceneManager.LoadScene(scene);
     }
 }

@@ -1,5 +1,6 @@
 public static class LessonsCompleted
 {
+    public static bool BasicsCompleted { get; set; }
     public static bool BinaryCompleted { get; set; }
     public static bool SolarCompleted { get; set; }
     public static bool SandboxCompleted { get; set; }
@@ -22,4 +23,14 @@ public static class LessonsCompleted
     public static bool Lesson6Completed { get; set; }
     public static bool Lesson7Completed { get; set; }
     public static bool Lesson8Completed { get; set; }
+
+    //Completed Once
+    public static bool Lesson1CompletedOnce { get; set; }
+    public static bool Lesson2CompletedOnce { get; set; }
+    public static bool Lesson3CompletedOnce { get; set; }
+    public static bool Lesson4CompletedOnce { get; set; }
+    public static bool Lesson5CompletedOnce { get; set; }
+    public static bool Lesson6CompletedOnce { get; set; }
+    public static bool Lesson7CompletedOnce { get; set; }
+    public static bool Lesson8CompletedOnce { get; set; }
 }

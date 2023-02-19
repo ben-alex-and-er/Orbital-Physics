@@ -3166,9 +3166,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1229717942}
-        m_TargetAssemblyTypeName: SystemController, Assembly-CSharp
-        m_MethodName: ReturnToMenu
+      - m_Target: {fileID: 89112276}
+        m_TargetAssemblyTypeName: Lesson2, Assembly-CSharp
+        m_MethodName: ResetLesson
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3176,6 +3176,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1229717942}
+        m_TargetAssemblyTypeName: SystemController, Assembly-CSharp
+        m_MethodName: ReturnToMenu
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Basic Menu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1192140559
@@ -4662,6 +4674,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7356561901249600426, guid: d0d51c6f3420bba4a8279b459b78326b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7356561902553822228, guid: d0d51c6f3420bba4a8279b459b78326b, type: 3}
+      propertyPath: m_text
+      value: 'Now see what happens when you run the simulation again - The objects
+        are still in a stable orbit. How come?
+
+
+        The higher mass an object
+        has, the more acceleration it causes to OTHER objects, so the sun will have
+        a different acceleration, and not the planet'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7356561902755533774, guid: d0d51c6f3420bba4a8279b459b78326b, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

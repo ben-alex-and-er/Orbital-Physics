@@ -34,6 +34,7 @@ public class Lesson2 : Lesson
 
     private void CompletedLesson()
     {
+        Lesson2CompletedOnce = true;
         Lesson2Completed = true;
         beforeLesson.SetActive(false);
         afterLesson.SetActive(true);
