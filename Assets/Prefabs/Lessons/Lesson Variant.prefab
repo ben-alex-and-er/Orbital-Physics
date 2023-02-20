@@ -8,8 +8,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2689009604613159192, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
+      propertyPath: m_Name
+      value: Part 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2689009604613159192, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2689009604656382528, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
+      propertyPath: m_Name
+      value: Final Part
       objectReference: {fileID: 0}
     - target: {fileID: 2689009604656382528, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
       propertyPath: m_IsActive

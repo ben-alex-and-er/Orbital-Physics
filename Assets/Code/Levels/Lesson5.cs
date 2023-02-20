@@ -6,16 +6,16 @@ public class Lesson5 : Lesson
 
     private void Start()
     {
-        beforeLesson.SetActive(!Lesson5Completed);
-        afterLesson.SetActive(Lesson5Completed);
+        part1.SetActive(!Lesson5Completed);
+        finalPart.SetActive(Lesson5Completed);
     }
 
     public void CompletedLesson()
     {
         Lesson5CompletedOnce = true;
         Lesson5Completed = true;
-        beforeLesson.SetActive(false);
-        afterLesson.SetActive(true);
+        part1.SetActive(false);
+        finalPart.SetActive(true);
     }
 
     public void ResetLesson()

@@ -1,0 +1,20 @@
+Lesson 1:
+	Play
+	Pause
+	Reset
+	Conclusion
+
+Lesson 2:
+	Change Planet Mass
+	Play
+	Pause to change mass
+	Click on Sun
+	Change Sun Mass
+	Play
+	Conclusion
+
+Lesson 3:
+	Drag and Drop Planet
+	Change Velocity/Angle
+	Play
+	Conclusion

@@ -689,7 +689,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9e18dd8bcbdf64e8b9a571f7af79eb3b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a54e209e22b363c419d4964fc263c6e3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1597,12 +1597,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef5f644582cba542ae53bb063366909, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  basicTick: {fileID: 0}
   binaryTick: {fileID: 0}
   solarTick: {fileID: 0}
   sandboxTick: {fileID: 0}
-  binary2DTick: {fileID: 0}
-  binary3DTick: {fileID: 0}
-  solar2DTick: {fileID: 0}
-  solar3DTick: {fileID: 0}
-  sandbox2DTick: {fileID: 484616790}
-  sandbox3DTick: {fileID: 761399002}
+  binaryLock: {fileID: 0}
+  solarLock: {fileID: 0}
+  sandboxLock: {fileID: 0}
+  binaryButton: {fileID: 0}
+  solarButton: {fileID: 0}
+  sandboxButton: {fileID: 0}

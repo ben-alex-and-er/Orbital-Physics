@@ -14,9 +14,25 @@ public static class LessonsCompleted
     public static bool Sandbox2D { get; set; }
     public static bool Sandbox3D { get; set; }
 
-    //Lessons
+    //Lesson 1
+    public static bool Lesson1P1Completed { get; set; }
+    public static bool Lesson1P2Completed { get; set; }
+
     public static bool Lesson1Completed { get; set; }
+    public static bool Lesson1CompletedOnce { get; set; }
+
+    //Lesson 2
+    public static bool Lesson2P1Completed { get; set; }
+    public static bool Lesson2P2Completed { get; set; }
+    public static bool Lesson2P3Completed { get; set; }
+    public static bool Lesson2P4Completed { get; set; }
+    public static bool Lesson2P5Completed { get; set; }
+
     public static bool Lesson2Completed { get; set; }
+    public static bool Lesson2CompletedOnce { get; set; }
+
+
+
     public static bool Lesson3Completed { get; set; }
     public static bool Lesson4Completed { get; set; }
     public static bool Lesson5Completed { get; set; }
@@ -25,8 +41,6 @@ public static class LessonsCompleted
     public static bool Lesson8Completed { get; set; }
 
     //Completed Once
-    public static bool Lesson1CompletedOnce { get; set; }
-    public static bool Lesson2CompletedOnce { get; set; }
     public static bool Lesson3CompletedOnce { get; set; }
     public static bool Lesson4CompletedOnce { get; set; }
     public static bool Lesson5CompletedOnce { get; set; }
