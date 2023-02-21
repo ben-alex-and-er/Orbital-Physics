@@ -53,7 +53,6 @@ public class Lesson3 : Lesson
 
     private void Update()
     {
-        Debug.Log("x velocity: " + newPlanet.velocity.x);
         if (!objectsToNotTrack.Contains(planetEditor.planet) && newPlanet != null && Math.Abs(newPlanet.velocity.x) > Threshold)
             Part3();
     }
