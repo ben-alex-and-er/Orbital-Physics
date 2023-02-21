@@ -69,8 +69,8 @@ public class Lesson1 : Lesson
 
     public void CompletedLesson()
     {
-        Lesson1P1Completed = true;
-        Lesson1P2Completed = true;
+        if (!Lesson1P1Completed || !Lesson1P2Completed || Lesson1Completed)
+            return;
 
         Lesson1Completed = true;
         Lesson1CompletedOnce = true;

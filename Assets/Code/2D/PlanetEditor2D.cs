@@ -13,6 +13,8 @@ public class PlanetEditor2D : PlanetEditor
 	[SerializeField]
 	private Lesson3 lesson3;
 
+	private bool angleSliderInteractableOnStart;
+
 	private void Start()
 	{
 		initialMultiplier = Math.Sqrt(gravityController.speedMultiplier * gravityController.timeScale / gravityController.distanceMultiplier);
@@ -22,6 +24,8 @@ public class PlanetEditor2D : PlanetEditor
 		velocityInputField.onValueChanged.AddListener(delegate { VelocityChange(true); });
 		velocityExponential.onValueChanged.AddListener(delegate { VelocityChange(false); });
 		angleSlider.onValueChanged.AddListener(delegate { AngleChange(); });
+
+		angleSliderInteractableOnStart = angleSlider.interactable;
 
 		if (planet != null)
 			planetName.text = planet.gameObject.name;
@@ -93,7 +97,9 @@ public class PlanetEditor2D : PlanetEditor
 		massExponential.enabled = enable;
 		velocityInputField.enabled = enable;
 		velocityExponential.enabled = enable;
-		angleSlider.interactable = enable;
+
+		if (angleSliderInteractableOnStart)
+			angleSlider.interactable = enable;
 	}
 
 	public void SetPlanet(Object2D newPlanet, bool newCreation)
@@ -116,7 +122,7 @@ public class PlanetEditor2D : PlanetEditor
         {
 			planetVelocity = planet.initialVelocity;
 			if (lesson3 != null)
-				lesson3.CompletedLesson();
+				lesson3.Part2(planet);
         }
 
 		velocityExp = (int)(Math.Floor(Math.Log(planetVelocity, 10) + 1) - 1);

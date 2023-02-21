@@ -164,12 +164,6 @@ public class Lesson2 : Lesson
         if (!Lesson2P1Completed || !Lesson2P2Completed || !Lesson2P3Completed || !Lesson2P4Completed || !Lesson2P5Completed)
             return;
 
-        Lesson2P1Completed = true;
-        Lesson2P2Completed = true;
-        Lesson2P3Completed = true;
-        Lesson2P4Completed = true;
-        Lesson2P5Completed = true;
-
         Lesson2Completed = true;
         Lesson2CompletedOnce = true;
 
