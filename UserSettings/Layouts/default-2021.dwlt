@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 15
+  controlID: 17
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 16
+  controlID: 22
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 17
+  controlID: 23
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -189,8 +189,8 @@ MonoBehaviour:
     y: 0
     width: 356
     height: 614
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -215,8 +215,8 @@ MonoBehaviour:
     y: 0
     width: 1136
     height: 614
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 12}
@@ -636,7 +636,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 7e5affff5e5bffff205cffff605cffff9c5cffffc65dffff6263ffff5c7dffff627effffb0afffffa0c4ffffbcc4ffff94f1ffffa2f5ffffb2f5ffff2afbffff3c6700002ef50000fc4d0100cc7d0100e2860100b68d0100108f010022900100
+      m_ExpandedIDs: c8c6ffff80c8ffff26c9ffff36c9ffff7aceffff32d0ffffe4d0fffffad0ffff4ed6ffff06d8ffffaedbffffdaefffff32f2ffff28f5ffff82f9ffff08faffff2afbffff587600002c7d0000d67d00001e7e0000367e0000f6950000b0960000b4960000649a00004e9b000074a000006ea1000028a2000012a30000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -793,23 +793,23 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes/Menus
+    - Assets/Images/Lessons
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes/Menus
+  - Assets/Images/Lessons
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\ben25\OneDrive - University of Southampton\3200\Orbital
     Physics
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 248}
-    m_SelectedIDs: 6c660000
-    m_LastClickedID: 26220
-    m_ExpandedIDs: 000000002c6600002e6600003066000032660000346600005866000000ca9a3b
+    scrollPos: {x: 0, y: 112}
+    m_SelectedIDs: 349c0000
+    m_LastClickedID: 39988
+    m_ExpandedIDs: 00000000b6610000b8610000ba610000bc610000be610000827a000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -837,7 +837,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000002c6600002e660000306600003266000034660000
+    m_ExpandedIDs: 00000000b6610000b8610000ba610000bc610000be610000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -865,7 +865,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c62300005263000028620000ac62000062630000b0d30000ba6200006a640000a4640000186d0000066d000000000000ce8f0000fa62000002660000d263000060680000e2640000
+    m_ExpandedInstanceIDs: c62300005263000028620000ac62000062630000b0d30000ba6200006a640000a4640000186d0000066d000000000000ce8f0000fa6200000266000060680000e2640000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

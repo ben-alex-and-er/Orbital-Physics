@@ -40,16 +40,26 @@ public static class LessonsCompleted
 
 
 
+
+
+    //Lesson 7
+    public static bool Lesson7P1Completed { get; set; }
+
+    public static bool Lesson7Completed { get; set; }
+    public static bool Lesson7CompletedOnce { get; set; }
+    
+
+
+
+
     public static bool Lesson4Completed { get; set; }
     public static bool Lesson5Completed { get; set; }
     public static bool Lesson6Completed { get; set; }
-    public static bool Lesson7Completed { get; set; }
     public static bool Lesson8Completed { get; set; }
 
     //Completed Once
     public static bool Lesson4CompletedOnce { get; set; }
     public static bool Lesson5CompletedOnce { get; set; }
     public static bool Lesson6CompletedOnce { get; set; }
-    public static bool Lesson7CompletedOnce { get; set; }
     public static bool Lesson8CompletedOnce { get; set; }
 }

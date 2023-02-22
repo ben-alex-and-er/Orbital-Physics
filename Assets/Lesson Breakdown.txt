@@ -1,10 +1,10 @@
-Lesson 1:
+Lesson 1: - DONE
 	Play
 	Pause
 	Reset
 	Conclusion
 
-Lesson 2:
+Lesson 2: - DONE
 	Change Planet Mass
 	Play
 	Pause to change mass
@@ -13,8 +13,41 @@ Lesson 2:
 	Play
 	Conclusion
 
-Lesson 3:
+Lesson 3: - DONE
 	Drag and Drop Planet
 	Change Velocity/Angle
 	Play
 	Conclusion
+
+Lesson 4-6:
+	Systems
+
+Lesson7:
+	Play to see what black hole does
+	r = 2GM/c^2, G and c and enter mass
+	Explain why suck things in - high gravity
+
+Lesson 8:
+	F = Gm1m2/r2
+	Give user radius and G, let them click on the objects to find mass and enter mass
+	Conclusion
+
+Lesson 9:
+	F = Gm1m2/r2 and F = ma and let them input a value in the combined equation
+	Use equation to work out acceleration
+	Conclusion
+
+IDEAS:
+	Blackhole
+		Play to see what black hole does
+		Give Schwarzschild radius formula, G and c and enter mass
+		Explain why suck things in - high gravity
+	Force between objects
+		F = Gm1m2/r2
+		Give user radius and G, let them click on the objects to find mass and enter mass
+		Conclusion
+	Acceleration towards sun
+		F = Gm1m2/r2 and F = ma and let them input a value in the combined equation
+		Use equation to work out acceleration
+		Conclusion
+		
