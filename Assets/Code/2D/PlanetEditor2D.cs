@@ -126,10 +126,17 @@ public class PlanetEditor2D : PlanetEditor
         }
 
 		velocityExp = (int)(Math.Floor(Math.Log(planetVelocity, 10) + 1) - 1);
+		if (velocityExp == int.MinValue)
+			velocityExp = 0;
+
 		velocityValue = planetVelocity / (Mathf.Pow(10, velocityExp));
 		velocityValue = MathF.Round((float)velocityValue * 1000f) / 1000f;
+		if (double.IsNaN(velocityValue))
+			velocityValue = 0;
 
 		var tempAngle = planet.velocity.x != 0 ? Mathf.Rad2Deg * Mathf.Atan(planet.velocity.y / planet.velocity.x) : 90;
+		if (float.IsNaN(tempAngle))
+			tempAngle =  0;
 
 		bool xPositive = planet.velocity.x > 0;
 		bool yPositive = planet.velocity.y > 0;
