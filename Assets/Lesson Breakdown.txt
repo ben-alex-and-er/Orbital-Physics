@@ -22,17 +22,17 @@ Lesson 3: - DONE
 Lesson 4-6:
 	Systems
 
-Lesson7:
+Lesson 7: - DONE
 	Play to see what black hole does
 	r = 2GM/c^2, G and c and enter mass
 	Explain why suck things in - high gravity
 
-Lesson 8:
+Lesson 8: - DONE
 	F = Gm1m2/r2
-	Give user radius and G, let them click on the objects to find mass and enter mass
+	Give user radius and G, let them click on the objects to find mass and enter force
 	Conclusion
 
-Lesson 9:
+Lesson 9: - DONE
 	F = Gm1m2/r2 and F = ma and let them input a value in the combined equation
 	Use equation to work out acceleration
 	Conclusion

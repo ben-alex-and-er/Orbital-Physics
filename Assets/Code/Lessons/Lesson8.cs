@@ -4,39 +4,39 @@ using UnityEngine;
 using UnityEngine.UI;
 using static LessonsCompleted;
 
-public class Lesson7 : Lesson
+public class Lesson8 : Lesson
 {
     // Play/Pause usage
     [SerializeField]
     private GameObject part2;
 
-    [Header("Mass")]
+    [Header("Force")]
     [SerializeField]
-    private TMP_InputField massInputField;
+    private TMP_InputField forceInputField;
     [SerializeField]
-    private TMP_InputField massExponential;
+    private TMP_InputField forceExponential;
 
     [Header("Answers")]
     [SerializeField]
-    private double massValue = 4;
+    private double forceValue;
     [SerializeField]
-    private double massExpValue = 31;
+    private double forceExpValue;
 
 
     private void Start()
     {
-        massInputField.onValueChanged.AddListener(delegate { MassChange(); });
-        massExponential.onValueChanged.AddListener(delegate { MassChange(); });
+        forceInputField.onValueChanged.AddListener(delegate { ForceChange(); });
+        forceExponential.onValueChanged.AddListener(delegate { ForceChange(); });
 
         objects = new List<GameObject>() { part1, part2, finalPart };
 
         GameObject section;
 
-        if (Lesson7Completed)
+        if (Lesson8Completed)
         {
             section = finalPart;
         }
-        else if (Lesson7P1Completed)
+        else if (Lesson8P1Completed)
         {
             section = part2;
         }
@@ -47,41 +47,41 @@ public class Lesson7 : Lesson
 
         SetOneActive(section);
 
-        Lesson7P1Completed = Lesson7Completed;
+        Lesson8P1Completed = Lesson8Completed;
     }
 
-    //Pause
+    //Next
     public void Part2()
     {
-        if (Lesson7Completed)
+        if (Lesson8Completed)
             return;
 
-        Lesson7P1Completed = true;
+        Lesson8P1Completed = true;
 
         SetOneActive(part2);
     }
 
     public void CompletedLesson()
     {
-        if (!Lesson7P1Completed || Lesson7Completed)
+        if (!Lesson8P1Completed || Lesson8Completed)
             return;
 
-        Lesson7Completed = true;
-        Lesson7CompletedOnce = true;
+        Lesson8Completed = true;
+        Lesson8CompletedOnce = true;
 
         SetOneActive(finalPart);
     }
 
     public void ResetLesson()
     {
-        Lesson7P1Completed = false;
+        Lesson8P1Completed = false;
 
-        Lesson7Completed = false;
+        Lesson8Completed = false;
     }
 
-    private void MassChange()
+    private void ForceChange()
     {
-        if (double.Parse(massInputField.text) == massValue && int.Parse(massExponential.text) == massExpValue)
+        if (double.Parse(forceInputField.text) == forceValue && int.Parse(forceExponential.text) == forceExpValue)
             CompletedLesson();
     }
 }
