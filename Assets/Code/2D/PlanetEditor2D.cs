@@ -13,6 +13,9 @@ public class PlanetEditor2D : PlanetEditor
 	[SerializeField]
 	private Lesson3 lesson3;
 
+	[SerializeField]
+	private Lesson10 lesson10;
+
 	private bool angleSliderInteractableOnStart;
 
 	private void Start()
@@ -124,6 +127,9 @@ public class PlanetEditor2D : PlanetEditor
 			if (lesson3 != null)
 				lesson3.Part2(planet);
         }
+
+		if (lesson10 != null)
+			lesson10.CompletedLesson(planet);
 
 		velocityExp = (int)(Math.Floor(Math.Log(planetVelocity, 10) + 1) - 1);
 		if (velocityExp == int.MinValue)

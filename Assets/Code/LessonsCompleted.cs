@@ -2,6 +2,7 @@ public static class LessonsCompleted
 {
     public static bool BasicsCompleted { get; set; }
     public static bool BinaryCompleted { get; set; }
+    public static bool EquationsCompleted { get; set; }
     public static bool SolarCompleted { get; set; }
     public static bool SandboxCompleted { get; set; }
 
@@ -53,6 +54,19 @@ public static class LessonsCompleted
 
     public static bool Lesson8Completed { get; set; }
     public static bool Lesson8CompletedOnce { get; set; }
+
+    //Lesson 9
+    public static bool Lesson9P1Completed { get; set; }
+
+    public static bool Lesson9Completed { get; set; }
+    public static bool Lesson9CompletedOnce { get; set; }
+
+
+    //Lesson 10
+    public static bool Lesson10P1Completed { get; set; }
+
+    public static bool Lesson10Completed { get; set; }
+    public static bool Lesson10CompletedOnce { get; set; }
 
 
 

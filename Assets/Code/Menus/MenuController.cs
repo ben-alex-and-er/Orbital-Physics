@@ -11,6 +11,8 @@ public class MenuController : MonoBehaviour
     [SerializeField]
     private GameObject binaryTick;
     [SerializeField]
+    private GameObject equationsTick;
+    [SerializeField]
     private GameObject solarTick;
     [SerializeField]
     private GameObject sandboxTick;
@@ -19,6 +21,8 @@ public class MenuController : MonoBehaviour
     [SerializeField]
     private GameObject binaryLock;
     [SerializeField]
+    private GameObject equationsLock;
+    [SerializeField]
     private GameObject solarLock;
     [SerializeField]
     private GameObject sandboxLock;
@@ -26,6 +30,8 @@ public class MenuController : MonoBehaviour
     [Header("Buttons")]
     [SerializeField]
     private Button binaryButton;
+    [SerializeField]
+    private Button equationsButton;
     [SerializeField]
     private Button solarButton;
     [SerializeField]
@@ -36,17 +42,21 @@ public class MenuController : MonoBehaviour
     {
         basicTick.SetActive(BasicsCompleted);
         binaryTick.SetActive(BinaryCompleted);
+        equationsTick.SetActive(EquationsCompleted);
         solarTick.SetActive(SolarCompleted);
         sandboxTick.SetActive(SandboxCompleted);
 
         binaryLock.SetActive(!BasicsCompleted);
         binaryButton.interactable = (BasicsCompleted);
 
+        equationsLock.SetActive(!BasicsCompleted);
+        equationsButton.interactable = (BasicsCompleted);
+
         solarLock.SetActive(!BasicsCompleted);
         solarButton.interactable = (BasicsCompleted);
 
-        sandboxLock.SetActive(!BasicsCompleted || !SolarCompleted || !SandboxCompleted);
-        sandboxButton.interactable = (BasicsCompleted && SolarCompleted && SandboxCompleted);
+        sandboxLock.SetActive(!BasicsCompleted || !EquationsCompleted || !SolarCompleted || !SandboxCompleted);
+        sandboxButton.interactable = (BasicsCompleted && EquationsCompleted && SolarCompleted && SandboxCompleted);
     }
 
     public void LoadScene(string scene)

@@ -38,16 +38,13 @@ Lesson 9: - DONE
 	Conclusion
 
 IDEAS:
-	Blackhole
-		Play to see what black hole does
-		Give Schwarzschild radius formula, G and c and enter mass
-		Explain why suck things in - high gravity
-	Force between objects
-		F = Gm1m2/r2
-		Give user radius and G, let them click on the objects to find mass and enter mass
-		Conclusion
-	Acceleration towards sun
-		F = Gm1m2/r2 and F = ma and let them input a value in the combined equation
-		Use equation to work out acceleration
-		Conclusion
+	Moon
+		Calculations for moon
+	Gravity circle orbit equation
+		Make them enter the perfect velocity/mass so it is stable
+	Doppler effect
+		See 3.9.3
+	Gravitational potential?
+	Gravitational field strength
+	NEED TO INCLUDE SOME 3D
 		

@@ -6,7 +6,7 @@ using static LessonsCompleted;
 
 public class Lesson7 : Lesson
 {
-    // Play/Pause usage
+    // Event horizon
     [SerializeField]
     private GameObject part2;
 

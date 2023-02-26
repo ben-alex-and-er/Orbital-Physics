@@ -6,7 +6,7 @@ using static LessonsCompleted;
 
 public class Lesson8 : Lesson
 {
-    // Play/Pause usage
+    // Force calculation
     [SerializeField]
     private GameObject part2;
 

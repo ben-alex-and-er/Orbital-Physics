@@ -9,33 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Menus/Main Menu.unity
     guid: 9c3262b07ef12924cb9c2a60c260fab6
   - enabled: 1
-    path: Assets/Scenes/Menus/Binary Menu.unity
-    guid: dbb01489b4b30c94a9f82b654449ceea
-  - enabled: 1
-    path: Assets/Scenes/Binary/Binary 2D.unity
-    guid: 8d713458052d68a41958d313e87a4376
-  - enabled: 1
-    path: Assets/Scenes/Binary/Binary 3D.unity
-    guid: ef3e3b6a76c73474499138882ca27605
-  - enabled: 1
-    path: Assets/Scenes/Menus/Solar Menu.unity
-    guid: 29dcae1305a68074388ac1fe6451d923
-  - enabled: 1
-    path: Assets/Scenes/Solar System/Solar System 2D.unity
-    guid: ebd46a36fd48d3546996c560930883c1
-  - enabled: 1
-    path: Assets/Scenes/Solar System/Solar System 3D.unity
-    guid: d295d78ac11b6184091c8d8830808f64
-  - enabled: 1
-    path: Assets/Scenes/Menus/Sandbox Menu.unity
-    guid: 721d5330ab80171468d4ba931cd2e7fc
-  - enabled: 1
-    path: Assets/Scenes/Sandbox/2D.unity
-    guid: 120f843c4a1e4ee43a4d2991623415ca
-  - enabled: 1
-    path: Assets/Scenes/Sandbox/3D.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
     path: Assets/Scenes/Menus/Basic Menu.unity
     guid: ffaa03bda4b7b8840962cc3e02aeab12
   - enabled: 1
@@ -48,12 +21,39 @@ EditorBuildSettings:
     path: Assets/Scenes/Basic/Basic - 3.unity
     guid: 331a783234458fc43bf01738c5441b52
   - enabled: 1
+    path: Assets/Scenes/Menus/Binary Menu.unity
+    guid: dbb01489b4b30c94a9f82b654449ceea
+  - enabled: 1
     path: Assets/Scenes/Binary/Binary - 4.unity
     guid: 55be657c3e463e942b6345ffd08bb93b
+  - enabled: 1
+    path: Assets/Scenes/Binary/Binary - 6.unity
+    guid: 7b95795487402694d92faf3d800149d6
   - enabled: 1
     path: Assets/Scenes/Binary/Binary - 5.unity
     guid: 2c7e389fc2ad7c549ae3abbd56bff2d0
   - enabled: 1
-    path: Assets/Scenes/Binary/Binary - 6.unity
-    guid: 7b95795487402694d92faf3d800149d6
+    path: Assets/Scenes/Menus/Equations Menu.unity
+    guid: 04c870b781816284eae36d3aa145d407
+  - enabled: 1
+    path: Assets/Scenes/Equations/Equations - 7.unity
+    guid: 9ba36fa27bb103d4b9dd87f56cea2e42
+  - enabled: 1
+    path: Assets/Scenes/Equations/Equations - 8.unity
+    guid: 4af5b3af744b0ce4f8311f3502f7b948
+  - enabled: 1
+    path: Assets/Scenes/Equations/Equations - 9.unity
+    guid: 8328f94f2893ec043b0ed2b73f29f386
+  - enabled: 1
+    path: Assets/Scenes/Menus/Solar Menu.unity
+    guid: 29dcae1305a68074388ac1fe6451d923
+  - enabled: 1
+    path: Assets/Scenes/Menus/Sandbox Menu.unity
+    guid: 721d5330ab80171468d4ba931cd2e7fc
+  - enabled: 1
+    path: Assets/Scenes/Sandbox/2D.unity
+    guid: 120f843c4a1e4ee43a4d2991623415ca
+  - enabled: 1
+    path: Assets/Scenes/Sandbox/3D.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}

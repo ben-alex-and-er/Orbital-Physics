@@ -6,7 +6,7 @@ using static LessonsCompleted;
 
 public class Lesson9 : Lesson
 {
-    // Play/Pause usage
+    // Merge equations usage
     [SerializeField]
     private GameObject part2;
 
@@ -44,11 +44,11 @@ public class Lesson9 : Lesson
 
         GameObject section;
 
-        if (Lesson8Completed)
+        if (Lesson9Completed)
         {
             section = finalPart;
         }
-        else if (Lesson8P1Completed)
+        else if (Lesson9P1Completed)
         {
             section = part2;
         }
@@ -59,36 +59,36 @@ public class Lesson9 : Lesson
 
         SetOneActive(section);
 
-        Lesson8P1Completed = Lesson8Completed;
+        Lesson9P1Completed = Lesson9Completed;
     }
 
     //Calculate acc
     public void Part2()
     {
-        if (Lesson8Completed)
+        if (Lesson9Completed)
             return;
 
-        Lesson8P1Completed = true;
+        Lesson9P1Completed = true;
 
         SetOneActive(part2);
     }
 
     public void CompletedLesson()
     {
-        if (!Lesson8P1Completed || Lesson8Completed)
+        if (!Lesson9P1Completed || Lesson9Completed)
             return;
 
-        Lesson8Completed = true;
-        Lesson8CompletedOnce = true;
+        Lesson9Completed = true;
+        Lesson9CompletedOnce = true;
 
         SetOneActive(finalPart);
     }
 
     public void ResetLesson()
     {
-        Lesson8P1Completed = false;
+        Lesson9P1Completed = false;
 
-        Lesson8Completed = false;
+        Lesson9Completed = false;
     }
 
     private void EqChange()
