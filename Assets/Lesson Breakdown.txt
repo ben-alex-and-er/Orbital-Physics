@@ -37,6 +37,15 @@ Lesson 9: - DONE
 	Use equation to work out acceleration
 	Conclusion
 
+Lesson 10:
+	Zoom out
+	Click on gas giant
+	Conclusion - look at other planets and temps etc
+
+Lesson 11:
+	Change mass of planet until circular orbit
+	Same but in 3D
+
 IDEAS:
 	Moon
 		Calculations for moon
@@ -46,5 +55,9 @@ IDEAS:
 		See 3.9.3
 	Gravitational potential?
 	Gravitational field strength
-	NEED TO INCLUDE SOME 3D
-		
+	NEED TO INCLUDE SOME 3D - Maybe for last lessons for advanced students (and for sandbox)
+
+LESSONS NEED TO SHOW OFF FEATURES AND COMPLEXITY OF THE UNDERLYING CODE
+	Eg like adding loads of asteriods shows off the scalability etc.
+
+BRING VIVA SHEET WITH ANSWERS

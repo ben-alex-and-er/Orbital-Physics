@@ -16,11 +16,13 @@ Placing Object:
 	Think of ways to display educational stuffs
 	Maybe nested tool tip - Victoria 3
 
-Investigate speed multiplier (maybe increase fixed update speed)
 
 Change Gantt chart - include other cws
-
 Change name if planet
+
+Add demo tick button - that unlocks all lessons
+Move Camera in 3d
+Temperature for planet that changes in eliptical orbit
 
 Education
 	Think of lessons
