@@ -1,5 +1,6 @@
 public static class LessonsCompleted
 {
+    public static bool DemoMode { get; set; }
     public static bool BasicsCompleted { get; set; }
     public static bool BinaryCompleted { get; set; }
     public static bool EquationsCompleted { get; set; }

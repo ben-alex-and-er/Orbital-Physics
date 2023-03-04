@@ -16,6 +16,8 @@ public class MenuController : MonoBehaviour
     private GameObject solarTick;
     [SerializeField]
     private GameObject sandboxTick;
+    [SerializeField]
+    private GameObject demoTick;
 
     [Header("Locks")]
     [SerializeField]
@@ -45,6 +47,7 @@ public class MenuController : MonoBehaviour
         equationsTick.SetActive(EquationsCompleted);
         solarTick.SetActive(SolarCompleted);
         sandboxTick.SetActive(SandboxCompleted);
+        demoTick.SetActive(DemoMode);
 
         binaryLock.SetActive(!BasicsCompleted);
         binaryButton.interactable = (BasicsCompleted);
@@ -62,6 +65,33 @@ public class MenuController : MonoBehaviour
     public void LoadScene(string scene)
     {
         SceneManager.LoadScene(scene);
+    }
+
+    public void DemoButton()
+    {
+        DemoMode = !DemoMode;
+
+        Lesson1CompletedOnce = DemoMode;
+        Lesson2CompletedOnce = DemoMode;
+        Lesson3CompletedOnce = DemoMode;
+        Lesson4CompletedOnce = DemoMode;
+        Lesson5CompletedOnce = DemoMode;
+        Lesson6CompletedOnce = DemoMode;
+        Lesson7CompletedOnce = DemoMode;
+        Lesson8CompletedOnce = DemoMode;
+        Lesson9CompletedOnce = DemoMode;
+        Lesson10CompletedOnce = DemoMode;
+        Lesson11CompletedOnce = DemoMode;
+        Lesson12CompletedOnce = DemoMode;
+        //Lesson13CompletedOnce = DemoMode;
+
+        BasicsCompleted = DemoMode;
+        BinaryCompleted = DemoMode;
+        EquationsCompleted = DemoMode;
+        SolarCompleted = DemoMode;
+        SandboxCompleted = DemoMode;
+
+        Awake();
     }
 }
 
