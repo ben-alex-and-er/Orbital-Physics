@@ -22,11 +22,14 @@ public class PlanetEditor2D : PlanetEditor
 	{
 		initialMultiplier = Math.Sqrt(gravityController.speedMultiplier * gravityController.timeScale / gravityController.distanceMultiplier);
 
-		massInputField.onValueChanged.AddListener(delegate { MassChange(true); });
-		massExponential.onValueChanged.AddListener(delegate { MassChange(false); });
-		velocityInputField.onValueChanged.AddListener(delegate { VelocityChange(true); });
-		velocityExponential.onValueChanged.AddListener(delegate { VelocityChange(false); });
-		angleSlider.onValueChanged.AddListener(delegate { AngleChange(); });
+		if (!disableEditor)
+        {
+			massInputField.onValueChanged.AddListener(delegate { MassChange(true); });
+			massExponential.onValueChanged.AddListener(delegate { MassChange(false); });
+			velocityInputField.onValueChanged.AddListener(delegate { VelocityChange(true); });
+			velocityExponential.onValueChanged.AddListener(delegate { VelocityChange(false); });
+			angleSlider.onValueChanged.AddListener(delegate { AngleChange(); });
+        }
 
 		angleSliderInteractableOnStart = angleSlider.interactable;
 
@@ -70,8 +73,11 @@ public class PlanetEditor2D : PlanetEditor
 			velocityExp = int.Parse(velocityExponential.text);
         }
 
-		var v = velocityValue * Mathf.Pow(10, velocityExp);
-		planet.velocity = new((float)(Mathf.Cos(angle * Mathf.Deg2Rad) * v * initialMultiplier), (float)(Mathf.Sin(angle * Mathf.Deg2Rad) * v * initialMultiplier));
+		var velocity = velocityValue * Mathf.Pow(10, velocityExp);
+
+		planet.velocity = new(
+			(float)(Mathf.Cos(angle * Mathf.Deg2Rad) * velocity * initialMultiplier), 
+			(float)(Mathf.Sin(angle * Mathf.Deg2Rad) * velocity * initialMultiplier));
 	}
 
 	private void AngleChange()
@@ -119,7 +125,10 @@ public class PlanetEditor2D : PlanetEditor
 		massValue = planet.mass / (Mathf.Pow(10, massExp));
 		massValue = MathF.Round((float)massValue * 1000f) / 1000f;
 
-		var planetVelocity = new Vector2((float)(planet.velocity.x / initialMultiplier), (float)(planet.velocity.y / initialMultiplier)).magnitude;
+		var planetVelocity = new Vector2(
+			(float)(planet.velocity.x / initialMultiplier),
+			(float)(planet.velocity.y / initialMultiplier)
+		).magnitude;
 
 		if (newPlanet)
         {

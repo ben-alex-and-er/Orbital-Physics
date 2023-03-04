@@ -16,25 +16,31 @@ public class PlanetEditor3D : PlanetEditor
 	private TMP_Text depthAngleText;
 
 	private float depthAngle;
+	private bool angleSliderInteractableOnStart;
+	private bool depthSliderInteractableOnStart;
+
 
 	void Start()
 	{
 		initialMultiplier = Math.Sqrt(gravityController.speedMultiplier) / gravityController.distanceMultiplier;
+		if (!disableEditor)
+        {
+			massInputField.onValueChanged.AddListener(delegate { MassChange(true); });
+			massExponential.onValueChanged.AddListener(delegate { MassChange(false); });
+			velocityInputField.onValueChanged.AddListener(delegate { VelocityChange(true); });
+			velocityExponential.onValueChanged.AddListener(delegate { VelocityChange(false); });
+			angleSlider.onValueChanged.AddListener(delegate { AngleChange(); });
+			depthAngleSlider.onValueChanged.AddListener(delegate { AngleChange(); });
+        }
 
-		massInputField.onValueChanged.AddListener(delegate { MassChange(true); });
-		massExponential.onValueChanged.AddListener(delegate { MassChange(false); });
-		velocityInputField.onValueChanged.AddListener(delegate { VelocityChange(true); });
-		velocityExponential.onValueChanged.AddListener(delegate { VelocityChange(false); });
-		angleSlider.onValueChanged.AddListener(delegate { AngleChange(); });
-		depthAngleSlider.onValueChanged.AddListener(delegate { AngleChange(); });
+		angleSliderInteractableOnStart = angleSlider.interactable;
+		depthSliderInteractableOnStart = depthAngleSlider.interactable;
 
 		if (planet != null)
 			planetName.text = planet.gameObject.name;
 
 		if (disableEditor)
 			EnableInputs(false);
-
-		SetPlanet(planet, true);
 	}
 
 	void Update()
@@ -75,7 +81,7 @@ public class PlanetEditor3D : PlanetEditor
 		var alpha = angle * Mathf.Deg2Rad;
 		var beta = depthAngle * Mathf.Deg2Rad;
 
-		planet.velocity = new Vector3(
+		planet.velocity = new (
 			(float)(velocity * Math.Cos(beta) * Math.Cos(alpha) * initialMultiplier),
 			(float)(velocity * Math.Cos(beta) * Math.Sin(alpha) * initialMultiplier),
 			(float)(velocity * Math.Sin(beta) * initialMultiplier)
@@ -90,6 +96,7 @@ public class PlanetEditor3D : PlanetEditor
 		VelocityChange(true);
 		VelocityChange(false);
 		angleText.text = angle.ToString();
+		depthAngleText.text = depthAngle.ToString();
 		arrow.transform.eulerAngles = new Vector3(0, depthAngle, angle);
 	}
 
@@ -110,8 +117,12 @@ public class PlanetEditor3D : PlanetEditor
 		massExponential.enabled = enable;
 		velocityInputField.enabled = enable;
 		velocityExponential.enabled = enable;
-		angleSlider.interactable = enable;
-		depthAngleSlider.interactable = enable;
+
+		if (angleSliderInteractableOnStart)
+			angleSlider.interactable = enable;
+
+		if (depthSliderInteractableOnStart)
+			depthAngleSlider.interactable = enable;
 	}
 
 	public void SetPlanet(Object3D newPlanet, bool newCreation)
@@ -138,10 +149,21 @@ public class PlanetEditor3D : PlanetEditor
 			planetVelocity = planet.initialVelocity;
 
 		velocityExp = (int)(Math.Floor(Math.Log(planetVelocity, 10) + 1) - 1);
-		velocityValue = MathF.Round((float)(planetVelocity / (Mathf.Pow(10, velocityExp)) * 1000f) / 1000f);
+		if (velocityExp == int.MinValue)
+			velocityExp = 0;
 
-		var tempAngle = planet.velocity.x != 0 ? Mathf.Rad2Deg * Mathf.Atan(planet.velocity.y / planet.velocity.x) : 0;
+		velocityValue = planetVelocity / (Mathf.Pow(10, velocityExp));
+		velocityValue = MathF.Round((float)velocityValue * 1000f) / 1000f;
+		if (double.IsNaN(velocityValue))
+			velocityValue = 0;
+
+		var tempAngle = planet.velocity.x != 0 ? Mathf.Rad2Deg * Mathf.Atan(planet.velocity.y / planet.velocity.x) : 90;
+		if (float.IsNaN(tempAngle))
+			tempAngle = 0;
+		
 		var tempDepthAngle = planet.velocity.z != 0 ? Mathf.Rad2Deg * Mathf.Atan(planet.velocity.x / planet.velocity.z) : 0;
+		if (float.IsNaN(tempDepthAngle))
+			tempDepthAngle = 0;
 
 		bool xPositive = planet.velocity.x >= 0;
 		bool yPositive = planet.velocity.y >= 0; 
@@ -167,8 +189,6 @@ public class PlanetEditor3D : PlanetEditor
 
 		angle = planetVelocity == planet.initialVelocity ? planet.initialAngle : tempAngle;
 		depthAngle = planetVelocity == planet.initialVelocity ? planet.initialDepthAngle : tempDepthAngle;
-		Debug.Log("angle: " + angle);
-		Debug.Log("depthangle: " + depthAngle);
 
 		//Set Values
 		massInputField.text = massValue.ToString();
@@ -180,21 +200,8 @@ public class PlanetEditor3D : PlanetEditor
 		angleSlider.value = angle;
 		depthAngleSlider.value = depthAngle;
 
-		//var x = planet.velocity.x / initialMultiplier / planetVelocity;
-		//var y = planet.velocity.y / initialMultiplier / planetVelocity;
-		//var z = planet.velocity.z / initialMultiplier / planetVelocity;
-
-		//Debug.Log("x: " + x);
-		//Debug.Log("y: " + y);
-		//Debug.Log("z: " + z);
-
-		////var depthradians = Math.Asin(z);
-		////var radians = Math.Acos(x / Math.Cos(depthradians));
-
-		//var radians = Math.Atan2(y, x);
-		//var depthradians = Math.Atan2(Math.Sqrt(Math.Pow(x, 2) + Math.Pow(y, 2)), z);
-
-		//Debug.Log("rad: " + radians * Mathf.Rad2Deg);
-		//Debug.Log("depthrad: " + depthradians * Mathf.Rad2Deg);
+		angleText.text = angle.ToString();
+		depthAngleText.text = depthAngle.ToString();
+		arrow.transform.eulerAngles = new Vector3(0, depthAngle, angle);
 	}
 }

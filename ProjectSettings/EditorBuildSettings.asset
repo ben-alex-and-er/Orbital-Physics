@@ -51,10 +51,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Solar System/Solar - 10.unity
     guid: 3684ab90dac7b8f4e86c8fe08ad7d94b
   - enabled: 1
-    path: Assets/Scenes/Solar System/Solar - 11a.unity
+    path: Assets/Scenes/Solar System/Solar - 11.unity
     guid: c30dbccf292f5d34fb4c8b2e052649af
   - enabled: 1
-    path: Assets/Scenes/Solar System/Solar - 11b.unity
+    path: Assets/Scenes/Solar System/Solar - 12.unity
     guid: ff46cce6ac7da9c47a6407782f5728a1
   - enabled: 1
     path: Assets/Scenes/Menus/Sandbox Menu.unity

@@ -3667,7 +3667,7 @@ MonoBehaviour:
   angleText: {fileID: 131072295}
   arrow: {fileID: 1896767956}
   disableEditor: 0
-  planet: {fileID: 0}
+  planet: {fileID: 1533961073}
   depthAngleSlider: {fileID: 2012731859}
   depthAngleText: {fileID: 384335179}
 --- !u!1 &1315491747
@@ -4069,6 +4069,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2474b9362c27bb34a8b5742c2ab0b9d4, type: 3}
+--- !u!114 &1533961073 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7115968123360347836, guid: 2474b9362c27bb34a8b5742c2ab0b9d4, type: 3}
+  m_PrefabInstance: {fileID: 1438547614}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60575f1258f4fc24582eaed64e7b1384, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1537864779
 GameObject:
   m_ObjectHideFlags: 0
