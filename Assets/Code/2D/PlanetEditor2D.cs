@@ -16,6 +16,9 @@ public class PlanetEditor2D : PlanetEditor
 	[SerializeField]
 	private Lesson10 lesson10;
 
+	[SerializeField]
+	private TempCalc tempCalc;
+
 	private bool angleSliderInteractableOnStart;
 
 	private void Start()
@@ -46,6 +49,9 @@ public class PlanetEditor2D : PlanetEditor
 			return;
 
 		UpdateEditor();
+
+		if (tempCalc != null)
+			UpdateTemp();
 	}
 
     private void MassChange(bool value)
@@ -117,6 +123,9 @@ public class PlanetEditor2D : PlanetEditor
 		planetName.text = planet.gameObject.name;
 
 		UpdateEditor(newCreation);
+
+		if (tempCalc != null)
+			tempCalc.planet = newPlanet;
 	}
 
 	private void UpdateEditor(bool newPlanet = false)
@@ -175,5 +184,13 @@ public class PlanetEditor2D : PlanetEditor
 		velocityExponential.text = velocityExp.ToString();
 
 		angleSlider.value = angle;
+		angleText.text = angle.ToString();
+
+		arrow.transform.eulerAngles = new Vector3(0, 0, angle);
 	}
+
+	private void UpdateTemp()
+    {
+
+    }
 }
