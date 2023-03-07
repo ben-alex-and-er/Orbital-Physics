@@ -116,9 +116,6 @@ public class PlanetEditor3D : PlanetEditor
 			EnableInputs(pause);
 
 		paused = pause;
-
-		if (pause)
-			UpdateEditor();
 	}
 
 	private void EnableInputs(bool enable)

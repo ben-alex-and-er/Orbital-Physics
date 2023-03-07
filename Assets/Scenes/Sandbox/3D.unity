@@ -2910,7 +2910,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1300
-  field of view: 13.9
+  field of view: 22
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -2956,7 +2956,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1025170719}
-  zoom: 15
+  zoom: 22
   minField: 10
   maxField: 160
   lesson10: {fileID: 0}
