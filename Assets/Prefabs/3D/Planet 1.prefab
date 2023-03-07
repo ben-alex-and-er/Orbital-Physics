@@ -129,6 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b97bb32cda3f8248af907de2fd9c09d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minCollisionDistance: 2
   gravityObjects: []
   object3D: {fileID: 7115968123360347836}
 --- !u!96 &-1256419688845315830

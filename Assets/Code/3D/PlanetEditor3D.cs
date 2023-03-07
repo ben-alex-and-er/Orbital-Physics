@@ -22,7 +22,8 @@ public class PlanetEditor3D : PlanetEditor
 
 	void Start()
 	{
-		initialMultiplier = Math.Sqrt(gravityController.speedMultiplier) / gravityController.distanceMultiplier;
+		initialMultiplier = Math.Sqrt(gravityController.speedMultiplier * gravityController.timeScale / gravityController.distanceMultiplier);
+		
 		if (!disableEditor)
         {
 			massInputField.onValueChanged.AddListener(delegate { MassChange(true); });
@@ -53,6 +54,9 @@ public class PlanetEditor3D : PlanetEditor
 
 	private void MassChange(bool value)
 	{
+		if (!paused)
+			return;
+
 		if (value)
 		{
 			massValue = double.Parse(massInputField.text);
@@ -67,6 +71,9 @@ public class PlanetEditor3D : PlanetEditor
 
 	private void VelocityChange(bool value)
 	{
+		if (!paused)
+			return;
+
 		if (value)
 		{
 			velocityValue = double.Parse(velocityInputField.text);
@@ -91,6 +98,9 @@ public class PlanetEditor3D : PlanetEditor
 
 	private void AngleChange()
 	{
+		if (!paused)
+			return;
+
 		angle = angleSlider.value;
 		depthAngle = depthAngleSlider.value;
 		VelocityChange(true);

@@ -91,3 +91,17 @@ Report
 		Education stuff
 	Conclusion
 		Future work
+
+
+Make cylinders for axis
+
+Ideas:
+	Distance bar
+	Test 3d but with only 2d code to see why it glitches
+		Error occurs when angles are 90 etc
+		Weirdly the planet flies away when depth angle is set
+
+
+	Typing in input box glitch
+	Add lesson???
+	Drag and drop in 3D

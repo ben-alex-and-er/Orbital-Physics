@@ -49,13 +49,13 @@ public class PlanetEditor2D : PlanetEditor
 			return;
 
 		UpdateEditor();
-
-		if (tempCalc != null)
-			UpdateTemp();
 	}
 
     private void MassChange(bool value)
     {
+		if (!paused)
+			return;
+
 		if (value)
         {
 			massValue = double.Parse(massInputField.text);
@@ -70,6 +70,9 @@ public class PlanetEditor2D : PlanetEditor
 
 	private void VelocityChange(bool value)
 	{
+		if (!paused)
+			return;
+
 		if (value)
         {
 			velocityValue = double.Parse(velocityInputField.text);
@@ -88,6 +91,9 @@ public class PlanetEditor2D : PlanetEditor
 
 	private void AngleChange()
     {
+		if (!paused)
+			return;
+
 		angle = angleSlider.value;
 		VelocityChange(true);
 		VelocityChange(false);
@@ -188,9 +194,4 @@ public class PlanetEditor2D : PlanetEditor
 
 		arrow.transform.eulerAngles = new Vector3(0, 0, angle);
 	}
-
-	private void UpdateTemp()
-    {
-
-    }
 }
