@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
 using System;
 
 public class PlanetEditor2D : PlanetEditor
@@ -123,15 +119,15 @@ public class PlanetEditor2D : PlanetEditor
 			angleSlider.interactable = enable;
 	}
 
-	public void SetPlanet(Object2D newPlanet, bool newCreation)
+	public override void SetPlanet(BaseObject newPlanet, bool newCreation)
     {
-		planet = newPlanet;
+		planet = (Object2D)newPlanet;
 		planetName.text = planet.gameObject.name;
 
 		UpdateEditor(newCreation);
 
 		if (tempCalc != null)
-			tempCalc.planet = newPlanet;
+			tempCalc.planet = (Object2D)newPlanet;
 	}
 
 	private void UpdateEditor(bool newPlanet = false)

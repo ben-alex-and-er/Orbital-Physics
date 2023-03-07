@@ -7,7 +7,7 @@ public class Axis : MonoBehaviour
     [SerializeField]
     private GameObject tick;
 
-    private bool active;
+    private bool active = true;
 
     public void EnableAxis()
     {

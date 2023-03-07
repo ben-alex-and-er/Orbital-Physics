@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 722760323500512750}
   - component: {fileID: -1256419688845315830}
   m_Layer: 0
-  m_Name: Planet 1
+  m_Name: Planet 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -65,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 82d48e0ab88ad2d45ad25c5c4b16f499, type: 2}
+  - {fileID: 2100000, guid: 35cc357095fb2b0439fd4ad2af9e4dba, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

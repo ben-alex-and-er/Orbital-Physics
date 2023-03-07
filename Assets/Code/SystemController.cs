@@ -12,6 +12,8 @@ public class SystemController : MonoBehaviour
     private PlanetEditor planetEditor;
     [SerializeField]
     private GameObject dragAndDrop;
+    [SerializeField]
+    private CameraDrag rotator;
 
     public void PlayPause()
     {
@@ -21,6 +23,9 @@ public class SystemController : MonoBehaviour
 
         if (dragAndDrop != null)
             dragAndDrop.SetActive(pause);
+
+        if (rotator != null)
+            rotator.Pause(pause);
     }
 
     public void Reset()

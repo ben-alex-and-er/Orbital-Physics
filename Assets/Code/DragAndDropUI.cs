@@ -10,13 +10,13 @@ public class DragAndDropUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     private GameObject planet;
 
     private Camera mainCamera;
-    private PlanetEditor2D planetEditor;
+    private PlanetEditor planetEditor;
 
     // Start is called before the first frame update
     void Start()
     {
         mainCamera = Camera.main;
-        planetEditor = FindObjectOfType<PlanetEditor2D>();
+        planetEditor = FindObjectOfType<PlanetEditor>();
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -74,7 +74,7 @@ public class DragAndDropUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         var newPlanet = Instantiate(planet); 
         newPlanet.transform.position = p;
         newPlanet.name = planet.name;
-        planetEditor.SetPlanet(newPlanet.GetComponent<Object2D>(), true);
+        planetEditor.SetPlanet(newPlanet.GetComponent<BaseObject>(), true);
         
         //Replace UI Element
         var newObject = Instantiate(gameObject);

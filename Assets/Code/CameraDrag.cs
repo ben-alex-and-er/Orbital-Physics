@@ -10,10 +10,11 @@ public class CameraDrag : MonoBehaviour
 
     private float X;
     private float Y;
+    private bool isPause = true;
 
     void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && !isPause)
         {
             transform.Rotate(new Vector3(Input.GetAxis("Mouse Y") * speed, -Input.GetAxis("Mouse X") * speed, 0));
             X = transform.rotation.eulerAngles.x;
@@ -25,5 +26,10 @@ public class CameraDrag : MonoBehaviour
         }
     }
 
-
+    public void Pause(bool pause)
+    {
+        isPause = pause;
+        if (pause)
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+    }
 }

@@ -135,9 +135,9 @@ public class PlanetEditor3D : PlanetEditor
 			depthAngleSlider.interactable = enable;
 	}
 
-	public void SetPlanet(Object3D newPlanet, bool newCreation)
+	public override void SetPlanet(BaseObject newPlanet, bool newCreation)
 	{
-		planet = newPlanet;
+		planet = (Object3D)newPlanet;
 		planetName.text = planet.name;
 
 		UpdateEditor(newCreation);

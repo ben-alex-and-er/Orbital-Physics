@@ -48,4 +48,6 @@ public abstract class PlanetEditor : MonoBehaviour
 	protected bool paused;
 
 	public abstract void OnPause(bool pause);
+
+	public abstract void SetPlanet(BaseObject obj, bool b);
 }
