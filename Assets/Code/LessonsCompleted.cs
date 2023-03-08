@@ -40,8 +40,17 @@ public static class LessonsCompleted
     public static bool Lesson3Completed { get; set; }
     public static bool Lesson3CompletedOnce { get; set; }
 
+    //Lesson 4
+    public static bool Lesson4Completed { get; set; }
+    public static bool Lesson4CompletedOnce { get; set; }
 
+    //Lesson 5
+    public static bool Lesson5Completed { get; set; }
+    public static bool Lesson5CompletedOnce { get; set; }
 
+    //Lesson 6
+    public static bool Lesson6Completed { get; set; }
+    public static bool Lesson6CompletedOnce { get; set; }
 
 
     //Lesson 7
@@ -82,14 +91,4 @@ public static class LessonsCompleted
 
     public static bool Lesson12Completed { get; set; }
     public static bool Lesson12CompletedOnce { get; set; }
-
-
-    public static bool Lesson4Completed { get; set; }
-    public static bool Lesson5Completed { get; set; }
-    public static bool Lesson6Completed { get; set; }
-
-    //Completed Once
-    public static bool Lesson4CompletedOnce { get; set; }
-    public static bool Lesson5CompletedOnce { get; set; }
-    public static bool Lesson6CompletedOnce { get; set; }
 }

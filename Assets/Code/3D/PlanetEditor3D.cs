@@ -85,15 +85,14 @@ public class PlanetEditor3D : PlanetEditor
 
 		var velocity = velocityValue * Mathf.Pow(10, velocityExp);
 
-		var alpha = angle * Mathf.Deg2Rad;
-		var beta = depthAngle * Mathf.Deg2Rad;
+		var alpha = (angle) * Mathf.Deg2Rad;
+		var beta = (depthAngle) * Mathf.Deg2Rad;
 
 		planet.velocity = new (
 			(float)(velocity * Math.Cos(beta) * Math.Cos(alpha) * initialMultiplier),
 			(float)(velocity * Math.Cos(beta) * Math.Sin(alpha) * initialMultiplier),
 			(float)(velocity * Math.Sin(beta) * initialMultiplier)
 		);
-
 	}
 
 	private void AngleChange()
@@ -164,38 +163,49 @@ public class PlanetEditor3D : PlanetEditor
 		if (double.IsNaN(velocityValue))
 			velocityValue = 0;
 
-		var tempAngle = planet.velocity.x != 0 ? Mathf.Rad2Deg * Mathf.Atan(planet.velocity.y / planet.velocity.x) : 90;
-		if (float.IsNaN(tempAngle))
-			tempAngle = 0;
-		
-		var tempDepthAngle = planet.velocity.z != 0 ? Mathf.Rad2Deg * Mathf.Atan(planet.velocity.x / planet.velocity.z) : 0;
-		if (float.IsNaN(tempDepthAngle))
-			tempDepthAngle = 0;
+		float tempAngle;
+		float tempDepthAngle;
 
-		bool xPositive = planet.velocity.x >= 0;
-		bool yPositive = planet.velocity.y >= 0; 
-		bool zPositive = planet.velocity.z >= 0;
-
-		if (xPositive && !yPositive)
-		{
-			tempAngle += 360;
-		}
-		else if (!xPositive)
-		{
-			tempAngle += 180;
-		}
-
-		if (zPositive && !xPositive)
+		if (planet.velocity.x == 0)
         {
-			tempDepthAngle += 360;
+			if (planet.velocity.y > 0)
+            {
+				tempAngle = Mathf.PI / 2;
+            }
+			else
+            {
+				tempAngle = -Mathf.PI / 2;
+			}
         }
-		else if (!zPositive)
+		else
         {
-			tempDepthAngle += 180;
+			tempAngle = Mathf.Atan2(planet.velocity.y, planet.velocity.x);
         }
 
-		angle = planetVelocity == planet.initialVelocity ? planet.initialAngle : tempAngle;
-		depthAngle = planetVelocity == planet.initialVelocity ? planet.initialDepthAngle : tempDepthAngle;
+
+		var sq = Mathf.Sqrt(Mathf.Pow(planet.velocity.x, 2) + Mathf.Pow(planet.velocity.y, 2));
+
+		if (sq == 0)
+        {
+			if (planet.velocity.z > 0)
+            {
+				tempDepthAngle = Mathf.PI / 2;
+			}
+			else
+			{
+				tempDepthAngle = -Mathf.PI / 2;
+			}
+        }
+		else
+        {
+			tempDepthAngle = Mathf.Atan2(planet.velocity.z, sq);
+        }
+
+		tempAngle *= Mathf.Rad2Deg;
+		tempDepthAngle *= Mathf.Rad2Deg;
+
+		angle = tempAngle;
+		depthAngle = tempDepthAngle;
 
 		//Set Values
 		massInputField.text = massValue.ToString();

@@ -157,23 +157,27 @@ public class PlanetEditor2D : PlanetEditor
 		if (double.IsNaN(velocityValue))
 			velocityValue = 0;
 
-		var tempAngle = planet.velocity.x != 0 ? Mathf.Rad2Deg * Mathf.Atan(planet.velocity.y / planet.velocity.x) : 90;
-		if (float.IsNaN(tempAngle))
-			tempAngle =  0;
+		float tempAngle;
 
-		bool xPositive = planet.velocity.x > 0;
-		bool yPositive = planet.velocity.y > 0;
-
-		if (xPositive && !yPositive)
+		if (planet.velocity.x == 0)
 		{
-			tempAngle += 360;
+			if (planet.velocity.y > 0)
+			{
+				tempAngle = Mathf.PI / 2;
+			}
+			else
+			{
+				tempAngle = -Mathf.PI / 2;
+			}
 		}
-		else if (!xPositive)
+		else
 		{
-			tempAngle += 180;
+			tempAngle = Mathf.Atan2(planet.velocity.y, planet.velocity.x);
 		}
 
-		angle = planetVelocity == planet.initialVelocity ? planet.initialAngle : tempAngle;
+		tempAngle *= Mathf.Rad2Deg;
+
+		angle = tempAngle;
 
 		//Set Values
 		massInputField.text = massValue.ToString();

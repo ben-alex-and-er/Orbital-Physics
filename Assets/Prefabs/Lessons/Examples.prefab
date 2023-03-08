@@ -19,6 +19,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2689009604613159193, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 2689009604656382528, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
       propertyPath: m_Name
       value: Removed
@@ -38,6 +42,10 @@ PrefabInstance:
     - target: {fileID: 2689009605394458010, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
       propertyPath: m_margin.w
       value: -465.92407
+      objectReference: {fileID: 0}
+    - target: {fileID: 2689009605695373720, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 138
       objectReference: {fileID: 0}
     - target: {fileID: 2689009605695373721, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
       propertyPath: m_text
@@ -101,15 +109,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2689009606128405028, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2689009606128405028, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2689009606128405028, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2689009606128405028, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -153,12 +161,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2689009606333874161, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
       propertyPath: m_text
-      value: '- Sirius A and a Sirius B (white dwarf)
-
-        - Procyon A and Procyon
-        B
-
-        - Mira A and Mira B (white dwarf)'
+      value: '- Alpha Centauri A, Alpha Centauri B and Proxima Centauri (the closest
+        star to our sun)'
       objectReference: {fileID: 0}
     - target: {fileID: 2689009606333874161, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
       propertyPath: m_fontSize
@@ -191,6 +195,6 @@ PrefabInstance:
     - target: {fileID: 2689009606575060093, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 47d86c976bc608c46887bc13a5f726c1, type: 3}
+      objectReference: {fileID: 21300000, guid: 15753c897b10a8e49932ae9cf5311488, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}

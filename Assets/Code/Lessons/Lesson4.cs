@@ -2,8 +2,7 @@ using static LessonsCompleted;
 
 public class Lesson4 : Lesson
 {
-    // Play/Pause usage
-
+    // Binary
     private void Start()
     {
         part1.SetActive(!Lesson4Completed);
@@ -22,5 +21,4 @@ public class Lesson4 : Lesson
     {
         Lesson4Completed = false;
     }
-
 }

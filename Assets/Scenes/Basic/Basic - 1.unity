@@ -643,6 +643,8 @@ MonoBehaviour:
   disableEditor: 0
   planet: {fileID: 394193123}
   lesson3: {fileID: 0}
+  lesson10: {fileID: 0}
+  tempCalc: {fileID: 0}
 --- !u!1 &240752755
 GameObject:
   m_ObjectHideFlags: 0
@@ -3488,12 +3490,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2689009605394458010, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
       propertyPath: m_text
-      value: 'Well Done!
+      value: 'LESSON COMPLETE!
 
 
-        You now know how to use the main simulation controls.
-        Use the Return to Menu button to go to other levels, or reset the current
-        level.'
+        You now know how to use the main simulation
+        controls. Use the Return to Menu button to go to other levels, or reset the
+        current level.'
       objectReference: {fileID: 0}
     - target: {fileID: 2689009605695373721, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
       propertyPath: m_text
@@ -3599,6 +3601,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: bd48c73bcd91d5b4c98afce331718968, type: 3}
+    - target: {fileID: 5401450044209253514, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 57.4659
+      objectReference: {fileID: 0}
+    - target: {fileID: 5401450044209253514, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -237.6048
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
 --- !u!224 &896870147 stripped
@@ -5609,6 +5619,7 @@ MonoBehaviour:
   pause: 1
   planetEditor: {fileID: 0}
   dragAndDrop: {fileID: 0}
+  rotator: {fileID: 0}
 --- !u!4 &1912581758
 Transform:
   m_ObjectHideFlags: 0
