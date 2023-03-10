@@ -37,6 +37,8 @@ public class PlanetEditor2D : PlanetEditor
 
 		if (disableEditor)
 			EnableInputs(false);
+
+		SetPlanet(planet, true);
 	}
 
     private void Update()
@@ -161,7 +163,7 @@ public class PlanetEditor2D : PlanetEditor
 
 		if (planet.velocity.x == 0)
 		{
-			if (planet.velocity.y > 0)
+			if (planet.velocity.y >= 0)
 			{
 				tempAngle = Mathf.PI / 2;
 			}
@@ -177,7 +179,7 @@ public class PlanetEditor2D : PlanetEditor
 
 		tempAngle *= Mathf.Rad2Deg;
 
-		angle = tempAngle;
+		angle = newPlanet ? planet.initialAngle : tempAngle;
 
 		//Set Values
 		massInputField.text = massValue.ToString();

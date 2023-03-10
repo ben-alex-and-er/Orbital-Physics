@@ -45,7 +45,7 @@ public abstract class PlanetEditor : MonoBehaviour
 	protected int velocityExp = 1;
 	protected float angle;
 	protected double initialMultiplier;
-	protected bool paused;
+	protected bool paused = true;
 
 	public abstract void OnPause(bool pause);
 

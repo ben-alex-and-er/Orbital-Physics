@@ -168,7 +168,7 @@ public class PlanetEditor3D : PlanetEditor
 
 		if (planet.velocity.x == 0)
         {
-			if (planet.velocity.y > 0)
+			if (planet.velocity.y >= 0)
             {
 				tempAngle = Mathf.PI / 2;
             }
@@ -187,7 +187,7 @@ public class PlanetEditor3D : PlanetEditor
 
 		if (sq == 0)
         {
-			if (planet.velocity.z > 0)
+			if (planet.velocity.z >= 0)
             {
 				tempDepthAngle = Mathf.PI / 2;
 			}
@@ -204,8 +204,8 @@ public class PlanetEditor3D : PlanetEditor
 		tempAngle *= Mathf.Rad2Deg;
 		tempDepthAngle *= Mathf.Rad2Deg;
 
-		angle = tempAngle;
-		depthAngle = tempDepthAngle;
+		angle = newPlanet ? planet.initialAngle : tempAngle;
+		depthAngle = newPlanet ? planet.initialDepthAngle : tempDepthAngle;
 
 		//Set Values
 		massInputField.text = massValue.ToString();
