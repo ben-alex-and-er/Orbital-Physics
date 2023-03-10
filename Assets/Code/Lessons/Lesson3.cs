@@ -60,7 +60,7 @@ public class Lesson3 : Lesson
     //Change velocity
     public void Part2(Object2D obj)
     {
-        if (Lesson3P2Completed || Lesson3Completed)
+        if (Lesson3P2Completed || Lesson3Completed || objectsToNotTrack.Contains(obj))
             return;
 
         newPlanet = obj;
