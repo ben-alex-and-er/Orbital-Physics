@@ -68,4 +68,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Sandbox/Meteor.unity
     guid: 864a22bb7c6019748815a9e53ec66c21
+  - enabled: 1
+    path: Assets/Scenes/Sandbox/Binary System.unity
+    guid: 476d46dbc7900cf448c72db9a72ec353
   m_configObjects: {}
