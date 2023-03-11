@@ -645,6 +645,9 @@ MonoBehaviour:
   lesson3: {fileID: 0}
   lesson10: {fileID: 0}
   tempCalc: {fileID: 0}
+  otherObject: {fileID: 0}
+  lineRenderer: {fileID: 0}
+  distance: {fileID: 0}
 --- !u!1 &240752755
 GameObject:
   m_ObjectHideFlags: 0
@@ -2631,7 +2634,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5d234bc55d94f244ea4ee4053a471c38, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 13bd96d6922c5074eb5222f2134f8521, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3197,10 +3200,12 @@ PrefabInstance:
       propertyPath: m_text
       value: 'LESSON COMPLETE!
 
+        - Once you see this, you can return to the
+        menu
 
-        You now know how to use the main simulation
-        controls. Use the Return to Menu button to go to other levels, or reset the
-        current level.'
+
+        You now know how to use the main simulation controls. Use
+        the Return to Menu button to go to other levels, or reset the current level.'
       objectReference: {fileID: 0}
     - target: {fileID: 2689009605695373721, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
       propertyPath: m_text
@@ -3305,14 +3310,14 @@ PrefabInstance:
     - target: {fileID: 2689009606575060093, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: bd48c73bcd91d5b4c98afce331718968, type: 3}
+      objectReference: {fileID: 21300000, guid: f6911aa69bfe0a34292f06cf405b1006, type: 3}
     - target: {fileID: 5401450044209253514, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 57.4659
+      value: 139.1236
       objectReference: {fileID: 0}
     - target: {fileID: 5401450044209253514, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -237.6048
+      value: -278.43372
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
@@ -4236,7 +4241,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bd48c73bcd91d5b4c98afce331718968, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f6911aa69bfe0a34292f06cf405b1006, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

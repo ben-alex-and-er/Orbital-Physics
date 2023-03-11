@@ -435,8 +435,8 @@ MonoBehaviour:
   r: {fileID: 1213972786}
   accInputField: {fileID: 1390916924}
   accExponential: {fileID: 665843128}
-  accValue: 1.789
-  accExpValue: -8
+  accValue: 5.964
+  accExpValue: -3
 --- !u!1 &113329635
 GameObject:
   m_ObjectHideFlags: 0
@@ -3757,7 +3757,9 @@ MonoBehaviour:
     G =
     6.674x10^-11
 
-    r = 1.496x10^11'
+    r = 1.496x10^11
+
+    m = Mass of Sun'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4783,7 +4785,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7356561901077573247, guid: d0d51c6f3420bba4a8279b459b78326b, type: 3}
       propertyPath: m_text
-      value: 'Using Newton''s Law of Universal gravity:'
+      value: 'Using Newton''s Law of Universal Gravity:'
       objectReference: {fileID: 0}
     - target: {fileID: 7356561901249600425, guid: d0d51c6f3420bba4a8279b459b78326b, type: 3}
       propertyPath: m_Name

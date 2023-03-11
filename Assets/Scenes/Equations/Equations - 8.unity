@@ -2844,7 +2844,7 @@ PrefabInstance:
 
 
         You just calculated the force that is acting
-        on every single particle in the universe! You hands are technically being
+        on every single particle in the universe! Your hands are technically being
         forced towards each other by a miniscule force.
 
 
@@ -2859,7 +2859,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7356561902762633366, guid: d0d51c6f3420bba4a8279b459b78326b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0d51c6f3420bba4a8279b459b78326b, type: 3}

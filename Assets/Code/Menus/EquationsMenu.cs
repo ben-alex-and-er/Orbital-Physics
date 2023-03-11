@@ -42,7 +42,7 @@ public class EquationsMenu : MonoBehaviour
     public void LoadScene(string scene)
     {
         if (Lesson7CompletedOnce && Lesson8CompletedOnce && Lesson9CompletedOnce)
-            BinaryCompleted = true;
+            EquationsCompleted = true;
 
         SceneManager.LoadScene(scene);
     }
