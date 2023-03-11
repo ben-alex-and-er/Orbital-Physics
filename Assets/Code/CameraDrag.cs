@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class CameraDrag : MonoBehaviour
@@ -8,12 +9,21 @@ public class CameraDrag : MonoBehaviour
     [SerializeField]
     private Lesson12 lesson12;
 
+    [SerializeField]
+    private TMP_Text distance;
+
+    [SerializeField]
+    private Camera cam;
+
     private float X;
     private float Y;
     private bool isPause = true;
 
     void Update()
     {
+        if (distance != null)
+            distance.transform.rotation = Quaternion.LookRotation(-cam.transform.position + distance.transform.position);
+
         if (Input.GetMouseButton(0) && !isPause)
         {
             transform.Rotate(new Vector3(Input.GetAxis("Mouse Y") * speed, -Input.GetAxis("Mouse X") * speed, 0));

@@ -1,5 +1,6 @@
 using UnityEngine;
 using System;
+using TMPro;
 
 public class PlanetEditor2D : PlanetEditor
 {
@@ -15,10 +16,24 @@ public class PlanetEditor2D : PlanetEditor
 	[SerializeField]
 	private TempCalc tempCalc;
 
+	[Header("Line")]
+	[SerializeField]
+	private GameObject otherObject;
+
+	[SerializeField]
+	private LineRenderer lineRenderer;
+
+	[SerializeField]
+	private TMP_Text distance;
+
+
 	private bool angleSliderInteractableOnStart;
 
 	private void Start()
 	{
+		if (lineRenderer != null)
+			lineRenderer.SetPosition(0, otherObject.transform.position);
+
 		initialMultiplier = Math.Sqrt(gravityController.speedMultiplier * gravityController.timeScale / gravityController.distanceMultiplier);
 
 		if (!disableEditor)
@@ -47,6 +62,13 @@ public class PlanetEditor2D : PlanetEditor
 			return;
 
 		UpdateEditor();
+
+		if (lineRenderer != null)
+		{
+			lineRenderer.SetPosition(1, planet.transform.position);
+			distance.text = (Vector3.Distance(planet.transform.position, otherObject.transform.position) * gravityController.distanceMultiplier).ToString();
+			distance.transform.position = Vector3.Lerp(planet.transform.position, otherObject.transform.position, 0.5f);
+		}
 	}
 
     private void MassChange(bool value)

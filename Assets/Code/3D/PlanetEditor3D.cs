@@ -15,6 +15,16 @@ public class PlanetEditor3D : PlanetEditor
 	[SerializeField]
 	private TMP_Text depthAngleText;
 
+	[Header("Line")]
+	[SerializeField]
+	private GameObject otherObject;
+
+	[SerializeField]
+	private LineRenderer lineRenderer;
+
+	[SerializeField]
+	private TMP_Text distance;
+
 	private float depthAngle;
 	private bool angleSliderInteractableOnStart;
 	private bool depthSliderInteractableOnStart;
@@ -22,6 +32,9 @@ public class PlanetEditor3D : PlanetEditor
 
 	void Start()
 	{
+		if (lineRenderer != null)
+			lineRenderer.SetPosition(0, otherObject.transform.position);
+
 		initialMultiplier = Math.Sqrt(gravityController.speedMultiplier * gravityController.timeScale / gravityController.distanceMultiplier);
 		
 		if (!disableEditor)
@@ -50,6 +63,13 @@ public class PlanetEditor3D : PlanetEditor
 			return;
 
 		UpdateEditor();
+
+		if (lineRenderer != null)
+		{
+			lineRenderer.SetPosition(1, planet.transform.position);
+			distance.text = (Vector3.Distance(planet.transform.position, otherObject.transform.position) * gravityController.distanceMultiplier).ToString();
+			distance.transform.position = Vector3.Lerp(planet.transform.position, otherObject.transform.position, 0.5f);
+		}
 	}
 
 	private void MassChange(bool value)
