@@ -786,11 +786,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7356561902553822228, guid: d0d51c6f3420bba4a8279b459b78326b, type: 3}
       propertyPath: m_text
-      value: 'Well Done!
+      value: 'LESSON COMPLETE!
 
 
-        You know know about the solar system and the planets
-        inside it.'
+        You know know about the solar system and
+        the planets inside it.'
       objectReference: {fileID: 0}
     - target: {fileID: 7356561902755533774, guid: d0d51c6f3420bba4a8279b459b78326b, type: 3}
       propertyPath: m_IsActive

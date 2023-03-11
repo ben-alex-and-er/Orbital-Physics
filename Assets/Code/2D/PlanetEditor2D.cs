@@ -63,7 +63,7 @@ public class PlanetEditor2D : PlanetEditor
 
 		UpdateEditor();
 
-		if (lineRenderer != null)
+		if (lineRenderer != null && distance != null && otherObject != null)
 		{
 			lineRenderer.SetPosition(1, planet.transform.position);
 			distance.text = (Vector3.Distance(planet.transform.position, otherObject.transform.position) * gravityController.distanceMultiplier).ToString();
@@ -106,7 +106,8 @@ public class PlanetEditor2D : PlanetEditor
 
 		planet.velocity = new(
 			(float)(Mathf.Cos(angle * Mathf.Deg2Rad) * velocity * initialMultiplier), 
-			(float)(Mathf.Sin(angle * Mathf.Deg2Rad) * velocity * initialMultiplier));
+			(float)(Mathf.Sin(angle * Mathf.Deg2Rad) * velocity * initialMultiplier)
+		);
 	}
 
 	private void AngleChange()
@@ -143,7 +144,7 @@ public class PlanetEditor2D : PlanetEditor
 	public override void SetPlanet(BaseObject newPlanet, bool newCreation)
     {
 		planet = (Object2D)newPlanet;
-		planetName.text = planet.gameObject.name;
+		planetName.text = planet.name;
 
 		UpdateEditor(newCreation);
 

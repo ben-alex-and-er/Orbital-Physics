@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -64,7 +62,7 @@ public class PlanetEditor3D : PlanetEditor
 
 		UpdateEditor();
 
-		if (lineRenderer != null)
+		if (lineRenderer != null && distance != null && otherObject != null)
 		{
 			lineRenderer.SetPosition(1, planet.transform.position);
 			distance.text = (Vector3.Distance(planet.transform.position, otherObject.transform.position) * gravityController.distanceMultiplier).ToString();
@@ -239,6 +237,7 @@ public class PlanetEditor3D : PlanetEditor
 
 		angleText.text = angle.ToString();
 		depthAngleText.text = depthAngle.ToString();
+
 		arrow.transform.eulerAngles = new Vector3(0, depthAngle, angle);
 	}
 }

@@ -1018,6 +1018,47 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3661023431336058340, guid: 5dbe0da59e4ccb3478779e56bfe0b898, type: 3}
   m_PrefabInstance: {fileID: 7659845556533058954}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7659845556533058956 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5525024646981774822, guid: 5dbe0da59e4ccb3478779e56bfe0b898, type: 3}
+  m_PrefabInstance: {fileID: 7659845556533058954}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7659845556533058955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99b9564a2f615d743ae789efb054aaab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!58 &7659845556533058957
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7659845556533058955}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.055
+--- !u!114 &7659845556533058958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7659845556533058955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7c208d0814c1ea489b89eb619b689de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  planetEditor: {fileID: 223440139}
+  selfObject: {fileID: 7659845556533058956}
 --- !u!1001 &8119331478636373379
 PrefabInstance:
   m_ObjectHideFlags: 0

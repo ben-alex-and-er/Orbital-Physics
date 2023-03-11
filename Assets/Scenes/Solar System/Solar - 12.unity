@@ -762,6 +762,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3.5
   lesson12: {fileID: 792303647}
+  distance: {fileID: 0}
+  cam: {fileID: 0}
 --- !u!4 &807210465
 Transform:
   m_ObjectHideFlags: 0
@@ -993,7 +995,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7356561902553822228, guid: d0d51c6f3420bba4a8279b459b78326b, type: 3}
       propertyPath: m_text
-      value: 'Well Done!
+      value: 'LESSON COMPLETE!
 
 
         You know know how to control 3D-Mode.'

@@ -217,7 +217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7c208d0814c1ea489b89eb619b689de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  planetEditor: {fileID: 0}
+  planetEditor: {fileID: 353341235}
   selfObject: {fileID: 24493883}
 --- !u!1 &66574742
 GameObject:
@@ -1253,7 +1253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7c208d0814c1ea489b89eb619b689de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  planetEditor: {fileID: 0}
+  planetEditor: {fileID: 353341235}
   selfObject: {fileID: 1522490886}
 --- !u!58 &1522490888
 CircleCollider2D:
