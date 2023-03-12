@@ -65,7 +65,7 @@ public class PlanetEditor3D : PlanetEditor
 		if (lineRenderer != null && distance != null && otherObject != null)
 		{
 			lineRenderer.SetPosition(1, planet.transform.position);
-			distance.text = (Vector3.Distance(planet.transform.position, otherObject.transform.position) * gravityController.distanceMultiplier).ToString();
+			distance.text = (((int)Vector3.Distance(planet.transform.position, otherObject.transform.position)) * gravityController.distanceMultiplier).ToString() + "m";
 			distance.transform.position = Vector3.Lerp(planet.transform.position, otherObject.transform.position, 0.5f);
 		}
 	}

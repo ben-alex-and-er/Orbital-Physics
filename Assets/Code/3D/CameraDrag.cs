@@ -21,11 +21,12 @@ public class CameraDrag : MonoBehaviour
 
     void Update()
     {
-        if (distance != null)
-            distance.transform.rotation = Quaternion.LookRotation(-cam.transform.position + distance.transform.position);
 
         if (Input.GetMouseButton(0) && !isPause)
         {
+            if (distance != null && cam != null)
+                distance.transform.rotation = Quaternion.LookRotation(-cam.transform.position + distance.transform.position);
+        
             transform.Rotate(new Vector3(Input.GetAxis("Mouse Y") * speed, -Input.GetAxis("Mouse X") * speed, 0));
             X = transform.rotation.eulerAngles.x;
             Y = transform.rotation.eulerAngles.y;
@@ -41,5 +42,8 @@ public class CameraDrag : MonoBehaviour
         isPause = pause;
         if (pause)
             transform.rotation = Quaternion.Euler(0, 0, 0);
+
+        if (distance != null && cam != null)
+            distance.transform.rotation = Quaternion.LookRotation(-cam.transform.position + distance.transform.position);
     }
 }
