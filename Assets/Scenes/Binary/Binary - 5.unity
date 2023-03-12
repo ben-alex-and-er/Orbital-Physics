@@ -1729,7 +1729,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 384cd42de8ecfc94f8923ee6a641c51b, type: 3}
     - target: {fileID: 7356561901713887253, guid: d0d51c6f3420bba4a8279b459b78326b, type: 3}
       propertyPath: m_Name
-      value: 'Lesson 4:'
+      value: 'Lesson 5:'
       objectReference: {fileID: 0}
     - target: {fileID: 7356561901713887254, guid: d0d51c6f3420bba4a8279b459b78326b, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1737,7 +1737,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7356561901713887255, guid: d0d51c6f3420bba4a8279b459b78326b, type: 3}
       propertyPath: m_text
-      value: 'Lesson 4:'
+      value: 'Lesson 5:'
       objectReference: {fileID: 0}
     - target: {fileID: 7356561902553822226, guid: d0d51c6f3420bba4a8279b459b78326b, type: 3}
       propertyPath: m_IsActive

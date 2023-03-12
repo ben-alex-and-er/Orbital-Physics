@@ -388,12 +388,24 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8372683910922691924, guid: 038e660518c6b0d4490191c82f076cab, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8372683911039950638, guid: 038e660518c6b0d4490191c82f076cab, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8372683911745842794, guid: 038e660518c6b0d4490191c82f076cab, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8372683911745842794, guid: 038e660518c6b0d4490191c82f076cab, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8372683912495006404, guid: 038e660518c6b0d4490191c82f076cab, type: 3}
+      propertyPath: m_Interactable
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8372683912525435664, guid: 038e660518c6b0d4490191c82f076cab, type: 3}
@@ -1524,7 +1536,7 @@ PrefabInstance:
         have created
 
 
-        You know know how to use the circular velocity equation
+        You now know how to use the circular velocity equation
         to work out the mass and velocity of objects in a circular orbit.'
       objectReference: {fileID: 0}
     - target: {fileID: 7356561902755533774, guid: d0d51c6f3420bba4a8279b459b78326b, type: 3}

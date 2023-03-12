@@ -992,9 +992,9 @@ MonoBehaviour:
   m_text: 'The objects are still in a stable orbit. How come?
 
 
-    The higher mass
-    an object has, the more acceleration it causes to OTHER objects, so the sun will
-    have a different acceleration, and not the planet.
+    The higher the
+    mass of an object, the more acceleration it causes to OTHER objects, so the sun
+    will have a different acceleration, and not the planet.
 
 
     Pause the simulation
@@ -2081,7 +2081,7 @@ PrefabInstance:
 
 
         You can change the mass of any object
-        when the simulation is paused to make you own stable orbits.'
+        when the simulation is paused to make your own stable orbits.'
       objectReference: {fileID: 0}
     - target: {fileID: 7356561902755533774, guid: d0d51c6f3420bba4a8279b459b78326b, type: 3}
       propertyPath: m_IsActive

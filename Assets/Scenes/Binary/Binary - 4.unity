@@ -1060,11 +1060,19 @@ PrefabInstance:
     - target: {fileID: 7356561901077573247, guid: d0d51c6f3420bba4a8279b459b78326b, type: 3}
       propertyPath: m_text
       value: 'This is called a <b>Binary Star System</b>, and is when two Stars orbit
-        each other. Click Play:'
+        each other. Click Play/Pause:'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7356561901077573247, guid: d0d51c6f3420bba4a8279b459b78326b, type: 3}
+      propertyPath: m_fontSize
+      value: 33.9
       objectReference: {fileID: 0}
     - target: {fileID: 7356561901077573247, guid: d0d51c6f3420bba4a8279b459b78326b, type: 3}
       propertyPath: m_fontStyle
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7356561901077573247, guid: d0d51c6f3420bba4a8279b459b78326b, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 33.9
       objectReference: {fileID: 0}
     - target: {fileID: 7356561901077573247, guid: d0d51c6f3420bba4a8279b459b78326b, type: 3}
       propertyPath: m_isRightToLeft
@@ -1614,7 +1622,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 47d86c976bc608c46887bc13a5f726c1, type: 3}
     - target: {fileID: 4297097031577240671, guid: fe43e10331adbbb49b8098c597815be7, type: 3}
       propertyPath: m_text
-      value: '- Sirius A and a Sirius B (white dwarf)
+      value: '- Sirius A and Sirius B (white dwarf)
 
         - Procyon A and Procyon
         B

@@ -3205,7 +3205,8 @@ PrefabInstance:
 
 
         You now know how to use the main simulation controls. Use
-        the Return to Menu button to go to other levels, or reset the current level.'
+        the Return to Menu button to go to other levels, or to reset the current
+        level.'
       objectReference: {fileID: 0}
     - target: {fileID: 2689009605695373721, guid: 2b011d0bfb36e4447b80495feb929385, type: 3}
       propertyPath: m_text

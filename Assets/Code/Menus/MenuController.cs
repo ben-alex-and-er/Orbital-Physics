@@ -58,8 +58,8 @@ public class MenuController : MonoBehaviour
         solarLock.SetActive(!BasicsCompleted);
         solarButton.interactable = (BasicsCompleted);
 
-        sandboxLock.SetActive(!BasicsCompleted || !EquationsCompleted || !SolarCompleted || !SandboxCompleted);
-        sandboxButton.interactable = (BasicsCompleted && EquationsCompleted && SolarCompleted && SandboxCompleted);
+        sandboxLock.SetActive(!BasicsCompleted || !EquationsCompleted || !SolarCompleted || !BinaryCompleted);
+        sandboxButton.interactable = (BasicsCompleted && EquationsCompleted && SolarCompleted && BinaryCompleted);
     }
 
     public void LoadScene(string scene)
@@ -83,7 +83,6 @@ public class MenuController : MonoBehaviour
         Lesson10CompletedOnce = DemoMode;
         Lesson11CompletedOnce = DemoMode;
         Lesson12CompletedOnce = DemoMode;
-        //Lesson13CompletedOnce = DemoMode;
 
         BasicsCompleted = DemoMode;
         BinaryCompleted = DemoMode;

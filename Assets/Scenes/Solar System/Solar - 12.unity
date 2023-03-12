@@ -480,11 +480,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5392345659938533542, guid: d80cf479c2fa4d844952c0a6cf098183, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -809
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5392345659938533542, guid: d80cf479c2fa4d844952c0a6cf098183, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 291
+      value: -460
       objectReference: {fileID: 0}
     - target: {fileID: 5392345659938533542, guid: d80cf479c2fa4d844952c0a6cf098183, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -998,11 +998,11 @@ PrefabInstance:
       value: 'LESSON COMPLETE!
 
 
-        You know know how to control 3D-Mode.'
+        You now know how to control 3D-Mode.'
       objectReference: {fileID: 0}
     - target: {fileID: 7356561902755533774, guid: d0d51c6f3420bba4a8279b459b78326b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7356561902762633366, guid: d0d51c6f3420bba4a8279b459b78326b, type: 3}
       propertyPath: m_IsActive

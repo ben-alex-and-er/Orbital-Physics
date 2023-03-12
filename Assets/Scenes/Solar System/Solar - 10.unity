@@ -304,8 +304,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -50, y: -396.87274}
-  m_SizeDelta: {x: 567.9208, y: 376.0019}
+  m_AnchoredPosition: {x: -50, y: -462.11157}
+  m_SizeDelta: {x: 567.9208, y: 506.4796}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &320497256
 MonoBehaviour:
@@ -798,7 +798,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7356561902762633366, guid: d0d51c6f3420bba4a8279b459b78326b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0d51c6f3420bba4a8279b459b78326b, type: 3}
@@ -2104,28 +2104,32 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'These are the Terrestrial planets:
+  m_text: 'Click Play/Pause to see our Solar System in action.
+
+
+    These are the
+    Terrestrial planets:
 
     - Mercury, Venus, Earth, Mars
 
 
-    They
-    are small, and are composed primarily of rock and metals. They have:
+    They are small,
+    and are composed primarily of rock and metals. They have:
 
-    - High
-    Densities
+    - High Densities
 
-    - Slow Rotation
+    -
+    Slow Rotation
 
     - Solid Surfaces
 
     - No Rings
 
-    - Few
-    or no moons
+    - Few or no moons
 
 
-    Zoom out (with scroll) to see more planets:'
+    Zoom
+    out (with scroll) to see more planets:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

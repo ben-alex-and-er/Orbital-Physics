@@ -2139,7 +2139,7 @@ PrefabInstance:
     - target: {fileID: 1698550509036295954, guid: d45a4ee25807f4f4b8e604dd190df84c, type: 3}
       propertyPath: planet
       value: 
-      objectReference: {fileID: 6427187596543386031, guid: 23e38633f6e429f47ba68264df67394d, type: 3}
+      objectReference: {fileID: 6427187596543386031, guid: 332917d7f43a8fb419faae7147300dde, type: 3}
     - target: {fileID: 1698550509036295954, guid: d45a4ee25807f4f4b8e604dd190df84c, type: 3}
       propertyPath: planetTrail
       value: 
@@ -2265,7 +2265,7 @@ PrefabInstance:
     - target: {fileID: 1698550509036295954, guid: d45a4ee25807f4f4b8e604dd190df84c, type: 3}
       propertyPath: planet
       value: 
-      objectReference: {fileID: 6427187596543386031, guid: 23e38633f6e429f47ba68264df67394d, type: 3}
+      objectReference: {fileID: 6427187596543386031, guid: 10576cd7eb0d90047984e38495973371, type: 3}
     - target: {fileID: 1698550509036295954, guid: d45a4ee25807f4f4b8e604dd190df84c, type: 3}
       propertyPath: planetTrail
       value: 
@@ -2643,7 +2643,7 @@ PrefabInstance:
     - target: {fileID: 1698550509036295954, guid: d45a4ee25807f4f4b8e604dd190df84c, type: 3}
       propertyPath: planet
       value: 
-      objectReference: {fileID: 6427187596543386031, guid: 23e38633f6e429f47ba68264df67394d, type: 3}
+      objectReference: {fileID: 6427187596543386031, guid: 38d313c355c8e9b43913882e06d489d8, type: 3}
     - target: {fileID: 1698550509036295954, guid: d45a4ee25807f4f4b8e604dd190df84c, type: 3}
       propertyPath: planetTrail
       value: 
@@ -3399,7 +3399,7 @@ PrefabInstance:
     - target: {fileID: 1698550509036295954, guid: d45a4ee25807f4f4b8e604dd190df84c, type: 3}
       propertyPath: planet
       value: 
-      objectReference: {fileID: 6427187596543386031, guid: 23e38633f6e429f47ba68264df67394d, type: 3}
+      objectReference: {fileID: 6427187596543386031, guid: 609e5b427a7faa6408c0957fc6618176, type: 3}
     - target: {fileID: 1698550509036295954, guid: d45a4ee25807f4f4b8e604dd190df84c, type: 3}
       propertyPath: planetTrail
       value: 
@@ -3651,7 +3651,7 @@ PrefabInstance:
     - target: {fileID: 1698550509036295954, guid: d45a4ee25807f4f4b8e604dd190df84c, type: 3}
       propertyPath: planet
       value: 
-      objectReference: {fileID: 6427187596543386031, guid: 23e38633f6e429f47ba68264df67394d, type: 3}
+      objectReference: {fileID: 6427187596543386031, guid: bfdb5a8b8dbeeca41a96f8d5fee3330a, type: 3}
     - target: {fileID: 1698550509036295954, guid: d45a4ee25807f4f4b8e604dd190df84c, type: 3}
       propertyPath: planetTrail
       value: 
