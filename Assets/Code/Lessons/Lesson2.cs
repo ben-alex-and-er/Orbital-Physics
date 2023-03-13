@@ -34,7 +34,7 @@ public class Lesson2 : Lesson
 
     private const ulong Threshold = 10000000000000000000;
     private const int SunDiff = 10000;
-
+    private bool part2Once;
 
     // Start is called before the first frame update
     void Start()
@@ -87,7 +87,7 @@ public class Lesson2 : Lesson
 
     private void Update()
     {
-        if (Math.Abs(planetStartMass - planet.mass) > Threshold)
+        if (Math.Abs(planetStartMass - planet.mass) > Threshold && !part2Once)
         {
             Part2();
         }
@@ -109,6 +109,7 @@ public class Lesson2 : Lesson
         if (Lesson2P2Completed || Lesson2P3Completed || Lesson2P4Completed || Lesson2P5Completed || Lesson2Completed)
             return;
 
+        part2Once = true;
         Lesson2P1Completed = true;
 
         SetOneActive(part2);
@@ -180,5 +181,4 @@ public class Lesson2 : Lesson
 
         Lesson2Completed = false;
     }
-
 }
