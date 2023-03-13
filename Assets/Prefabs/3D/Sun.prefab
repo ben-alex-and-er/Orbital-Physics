@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8445192564190043484}
   - component: {fileID: 8761061678523401775}
   - component: {fileID: 5796597972637572748}
+  - component: {fileID: 718097381406583641}
   m_Layer: 0
   m_Name: Sun
   m_TagString: Untagged
@@ -129,6 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b97bb32cda3f8248af907de2fd9c09d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minCollisionDistance: 2
   gravityObjects: []
   object3D: {fileID: 8445192564190043484}
 --- !u!96 &5796597972637572748
@@ -230,3 +232,17 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!114 &718097381406583641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9172695456055825672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ac35d4f9aaa1de44b758f6088e26e93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  planetEditor: {fileID: 0}
+  selfObject: {fileID: 8445192564190043484}
