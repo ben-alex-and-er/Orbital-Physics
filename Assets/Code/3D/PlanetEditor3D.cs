@@ -30,9 +30,6 @@ public class PlanetEditor3D : PlanetEditor
 
 	void Start()
 	{
-		if (lineRenderer != null)
-			lineRenderer.SetPosition(0, otherObject.transform.position);
-
 		initialMultiplier = Math.Sqrt(gravityController.speedMultiplier * gravityController.timeScale / gravityController.distanceMultiplier);
 		
 		if (!disableEditor)
@@ -64,6 +61,7 @@ public class PlanetEditor3D : PlanetEditor
 
 		if (lineRenderer != null && distance != null && otherObject != null)
 		{
+			lineRenderer.SetPosition(0, otherObject.transform.position);
 			lineRenderer.SetPosition(1, planet.transform.position);
 			distance.text = (((int)Vector3.Distance(planet.transform.position, otherObject.transform.position)) * gravityController.distanceMultiplier).ToString() + "m";
 			distance.transform.position = Vector3.Lerp(planet.transform.position, otherObject.transform.position, 0.5f);
